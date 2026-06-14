@@ -1,0 +1,18 @@
+/* Archivo estilo.css - se puede enlazar en todas las páginas */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', 'Comic Neue', cursive;
+}
+button, .opcion {
+    cursor: pointer;
+    user-select: none;
+}
+@media (max-width: 600px) {
+    .pregunta-texto {
+        font-size: 1.5rem !important;
+    }
+    .opcion {
+        font-size: 1.2rem !important;
+    }
+}
