@@ -1,5 +1,5 @@
 <?php
-$tema = $_GET['tema'] ?? '';
+$tema = isset($_GET['tema']) ? $_GET['tema'] : '';
 $archivo_json = "data/{$tema}.json";
 if (!file_exists($archivo_json)) {
     die("❌ Práctica no encontrada. <a href='index.php'>Volver al menú</a>");
@@ -9,16 +9,20 @@ $data = json_decode($json_content, true);
 if (!$data) {
     die("❌ Error en el archivo de preguntas.");
 }
+
+$colorFondo = isset($data['colorFondo']) ? $data['colorFondo'] : '#f0f4c3';
+$colorBoton = isset($data['colorBoton']) ? $data['colorBoton'] : '#ffb74d';
+$titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title><?= htmlspecialchars($data['titulo'] ?? $tema) ?> 🎯</title>
+    <title><?php echo htmlspecialchars($titulo); ?> 🎯</title>
     <link rel="stylesheet" href="css/estilo.css">
     <style>
         body {
-            background: <?= $data['colorFondo'] ?? '#f0f4c3' ?>;
+            background: <?php echo $colorFondo; ?>;
             font-family: 'Comic Neue', 'Segoe UI', cursive;
             text-align: center;
             padding: 20px;
@@ -30,6 +34,7 @@ if (!$data) {
             margin: 20px auto;
             max-width: 800px;
             box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+            transition: 0.3s;
         }
         .pregunta-texto {
             font-size: 2rem;
@@ -44,7 +49,7 @@ if (!$data) {
             margin: 20px 0;
         }
         .opcion {
-            background: <?= $data['colorBoton'] ?? '#ffb74d' ?>;
+            background: <?php echo $colorBoton; ?>;
             border: none;
             border-radius: 50px;
             padding: 15px 20px;
@@ -57,6 +62,8 @@ if (!$data) {
         }
         .opcion:hover {
             transform: scale(1.02);
+            background: <?php echo $colorBoton; ?>;
+            filter: brightness(0.95);
         }
         .feedback {
             font-size: 1.4rem;
@@ -87,6 +94,9 @@ if (!$data) {
             cursor: pointer;
             margin-top: 20px;
         }
+        .btn-siguiente:hover {
+            background: #45a049;
+        }
         .personaje-guia {
             position: fixed;
             bottom: 20px;
@@ -102,7 +112,9 @@ if (!$data) {
             align-items: center;
             gap: 10px;
         }
-        .avatar { font-size: 3rem; }
+        .avatar {
+            font-size: 3rem;
+        }
         #mensaje-personaje {
             background: #ffefc0;
             border-radius: 20px;
@@ -117,6 +129,16 @@ if (!$data) {
             cursor: pointer;
             margin-bottom: 15px;
         }
+        .btn-voz:hover {
+            background: #ff8f00;
+        }
+        @media (max-width: 600px) {
+            .pregunta-texto { font-size: 1.5rem !important; }
+            .opcion { font-size: 1.2rem !important; padding: 12px 15px !important; }
+            .btn-siguiente, .btn-voz { font-size: 1.3rem !important; }
+            .personaje-guia { font-size: 0.9rem !important; max-width: 180px; }
+            .avatar { font-size: 2rem !important; }
+        }
     </style>
 </head>
 <body>
@@ -126,7 +148,7 @@ if (!$data) {
     <div class="opciones" id="opcionesDiv"></div>
     <div class="estrellas" id="estrellasDiv">☆☆☆☆☆</div>
     <div id="feedbackDiv" class="feedback"></div>
-    <button id="btnSiguiente" class="btn-siguiente" style="display:none;">➡️ Siguiente</button>
+    <button id="btnSiguiente" class="btn-siguiente" style="display:none;">➡️ Siguiente pregunta</button>
 </div>
 
 <div class="personaje-guia" id="personajeGuia">
@@ -136,7 +158,7 @@ if (!$data) {
 
 <script>
     // Pasamos los datos del tema a JavaScript
-    const temaData = <?= json_encode($data) ?>;
+    var temaData = <?php echo json_encode($data); ?>;
 </script>
 <script src="js/script.js"></script>
 <script src="js/personaje.js"></script>
