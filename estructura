@@ -1,17 +1,16 @@
 practicas/
 │
-├── index.php                # Lista de prácticas disponibles
-├── practica.php             # Página de una práctica (recibe ?tema=nombre)
+├── index.php
+├── practica.php
 ├── css/
-│   └── estilo.css           # Estilos visuales y responsivos
+│   └── estilo.css
 ├── js/
-│   ├── script.js            # Lógica principal (cargar preguntas, controlar juego)
-│   └── personaje.js         # Mensajes y animación del personaje guía
+│   ├── script.js          # Lógica principal (cargar preguntas, responder, siguiente)
+│   ├── personaje.js       # Mensajes y animación del personaje guía
+│   └── voz.js             # Lectura en voz alta (opcional)
 ├── data/
 │   ├── renal.json
 │   ├── vertebrados.json
-│   ├── reinos.json
-│   └── ... (puedes agregar más)
+│   └── reinos.json
 └── assets/
-    ├── personaje.png        # Opcional: imagen de un riñón, abeja, etc.
-    └── sonido_acierto.mp3   # Opcional: breve sonido de celebración
+    └── (imágenes opcionales)
