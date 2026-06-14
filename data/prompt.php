@@ -20,4 +20,10 @@ El formato debe ser exactamente el siguiente:
 
 /*opcional*/ Cantidad de preguntas: [número, ej: 6]
 Estilo: preguntas muy cortas, lenguaje divertido, usar emojis.
+
+--------------------------------------------
+
+Genera un archivo JSON para juego de preguntas. Tema: [TU TEMA]. 
+Formato: {"titulo":"...","colorFondo":"#...","colorBoton":"#...","preguntas":[{"id":1,"texto":"...","opciones":["...","...","..."],"correcta":0,"explicacion":"...","datoDivertido":"..."}]}
+Edad: [EDAD]. Haz 6 preguntas cortas con emojis.
 </pre>
