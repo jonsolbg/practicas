@@ -1,0 +1,31 @@
+{
+  "titulo": "🍄 Reino Fungi (Hongos)",
+  "colorFondo": "#fce4ec",
+  "colorBoton": "#ad1457",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Los hongos son autótrofos o heterótrofos?",
+      "opciones": ["Autótrofos (producen su alimento)", "Heterótrofos (se alimentan de otros)", "Ambos"],
+      "correcta": 1,
+      "explicacion": "Los hongos son heterótrofos, se alimentan de materia orgánica descompuesta.",
+      "datoDivertido": "🍞 Las levaduras son hongos unicelulares que se usan para hacer pan."
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál de estos NO es un hongo?",
+      "opciones": ["Champiñón", "Moho del pan", "Alga"],
+      "correcta": 2,
+      "explicacion": "Las algas pertenecen al Reino Protista, no al Reino Fungi.",
+      "datoDivertido": "🧀 El moho azul del queso Roquefort es un hongo comestible."
+    },
+    {
+      "id": 3,
+      "texto": "¿Cómo se alimentan la mayoría de los hongos?",
+      "opciones": ["Fotosíntesis", "Descomponiendo materia orgánica", "Cazando presas"],
+      "correcta": 1,
+      "explicacion": "Los hongos liberan enzimas que descomponen la materia y luego la absorben.",
+      "datoDivertido": "🌳 Los hongos ayudan a reciclar nutrientes en el bosque."
+    }
+  ]
+}
