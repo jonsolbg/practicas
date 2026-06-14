@@ -1,0 +1,31 @@
+{
+  "titulo": "🐛 Animales invertebrados",
+  "colorFondo": "#e0f7fa",
+  "colorBoton": "#00838f",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué grupo de invertebrados tiene el cuerpo formado por anillos?",
+      "opciones": ["Moluscos", "Anélidos", "Artrópodos"],
+      "correcta": 1,
+      "explicacion": "Los anélidos como la lombriz de tierra tienen el cuerpo segmentado en anillos.",
+      "datoDivertido": "🪱 Las lombrices son muy importantes para airear la tierra."
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál de estos es un artrópodo?",
+      "opciones": ["Caracol", "Esponja marina", "Araña"],
+      "correcta": 2,
+      "explicacion": "Los artrópodos incluyen insectos, arácnidos (arañas) y crustáceos.",
+      "datoDivertido": "🕷️ Las arañas no son insectos, tienen 8 patas."
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué tienen en común los equinodermos?",
+      "opciones": ["Viven en agua dulce", "Son exclusivamente marinos", "Tienen alas"],
+      "correcta": 1,
+      "explicacion": "Las estrellas y erizos de mar son equinodermos y solo viven en el mar.",
+      "datoDivertido": "⭐ Las estrellas de mar pueden regenerar un brazo perdido."
+    }
+  ]
+}

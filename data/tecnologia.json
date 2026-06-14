@@ -1,0 +1,31 @@
+{
+  "titulo": "🩻 Tecnología médica",
+  "colorFondo": "#fff8e1",
+  "colorBoton": "#f57c00",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué aparato se usa para ver fracturas de huesos?",
+      "opciones": ["Ultrasonido", "Rayos X", "Resonancia magnética"],
+      "correcta": 1,
+      "explicacion": "Los Rayos X atraviesan tejidos y muestran los huesos.",
+      "datoDivertido": "☢️ Wilhelm Röntgen descubrió los Rayos X en 1895 por accidente."
+    },
+    {
+      "id": 2,
+      "texto": "¿Qué aparato usa ondas sonoras para ver dentro del cuerpo?",
+      "opciones": ["Rayos láser", "Bomba de cobalto", "Ultrasonido"],
+      "correcta": 2,
+      "explicacion": "El ultrasonido usa ondas de alta frecuencia para crear imágenes.",
+      "datoDivertido": "👶 El ultrasonido se usa mucho para ver bebés en el vientre materno."
+    },
+    {
+      "id": 3,
+      "texto": "¿Para qué se usa la bomba de cobalto?",
+      "opciones": ["Ver fracturas", "Tratar cáncer (radioterapia)", "Hacer cirugías precisas"],
+      "correcta": 1,
+      "explicacion": "La bomba de cobalto emite radiación para destruir células cancerosas.",
+      "datoDivertido": "⚛️ El cobalto-60 es un material radiactivo usado en medicina."
+    }
+  ]
+}
