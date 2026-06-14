@@ -1,0 +1,55 @@
+{
+  "titulo": "🧠 Riñones y orina",
+  "colorFondo": "#e0f2f1",
+  "colorBoton": "#00897b",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué órgano filtra la sangre y tiene forma de frijol?",
+      "opciones": ["Corazón", "Riñón", "Hígado"],
+      "correcta": 1,
+      "explicacion": "Los riñones son dos órganos con forma de frijol que filtran las toxinas.",
+      "datoDivertido": "¡Cada riñón tiene cerca de 1 millón de filtros diminutos llamados nefronas!"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cómo se llaman los tubos que llevan la orina del riñón a la vejiga?",
+      "opciones": ["Uréteres", "Uretra", "Arterias"],
+      "correcta": 0,
+      "explicacion": "Los uréteres conectan los riñones con la vejiga.",
+      "datoDivertido": "La orina viaja gracias a movimientos musculares en los uréteres."
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué enfermedad es conocida como 'piedras en los riñones'?",
+      "opciones": ["Nefritis", "Cálculos renales", "Cistitis"],
+      "correcta": 1,
+      "explicacion": "Los cálculos renales son cristales duros que se forman en los riñones.",
+      "datoDivertido": "Beber mucha agua ayuda a prevenirlos 💧"
+    },
+    {
+      "id": 4,
+      "texto": "¿Cuál de estos NO es un cuidado del sistema renal?",
+      "opciones": ["Tomar agua", "Comer mucha sal", "No aguantarse la orina"],
+      "correcta": 1,
+      "explicacion": "Comer mucha sal daña los riñones. Es mejor comer poca sal.",
+      "datoDivertido": "El exceso de sal puede aumentar la presión arterial."
+    },
+    {
+      "id": 5,
+      "texto": "¿La uretra es más larga en hombres o en mujeres?",
+      "opciones": ["Hombres", "Mujeres", "Igual"],
+      "correcta": 0,
+      "explicacion": "La uretra masculina mide 20-25 cm; la femenina 3-4 cm.",
+      "datoDivertido": "Por eso los hombres pueden orinar de pie más fácilmente."
+    },
+    {
+      "id": 6,
+      "texto": "¿Qué componente NO es parte de la orina?",
+      "opciones": ["Agua", "Urea", "Glucosa (azúcar)"],
+      "correcta": 2,
+      "explicacion": "La orina normal tiene agua, urea, sales y amoniaco, pero no azúcar.",
+      "datoDivertido": "Si hay glucosa en la orina puede ser señal de diabetes."
+    }
+  ]
+}
