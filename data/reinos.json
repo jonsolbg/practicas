@@ -1,0 +1,87 @@
+{
+  "titulo": "🔬 Los 5 Reinos Biológicos",
+  "colorFondo": "#fff9c4",
+  "colorBoton": "#f9a825",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿En qué reino están las bacterias?",
+      "opciones": ["Protista", "Monera", "Fungi"],
+      "correcta": 1,
+      "explicacion": "El reino Monera incluye bacterias y algas verdiazules. Son seres muy pequeños y sin núcleo.",
+      "datoDivertido": "🦠 ¡Hay más bacterias en tu cuerpo que células humanas! Muchas son buenas."
+    },
+    {
+      "id": 2,
+      "texto": "¿Qué reino incluye a los hongos como los champiñones y el moho?",
+      "opciones": ["Plantae", "Animalia", "Fungi"],
+      "correcta": 2,
+      "explicacion": "El reino Fungi son los hongos. No son plantas ni animales, ¡son un reino aparte!",
+      "datoDivertido": "🍄 El hongo más grande del mundo pesa cientos de toneladas y vive bajo tierra."
+    },
+    {
+      "id": 3,
+      "texto": "Las plantas pertenecen al reino...",
+      "opciones": ["Plantae", "Protista", "Animalia"],
+      "correcta": 0,
+      "explicacion": "El reino Plantae incluye todas las plantas: árboles, flores, musgos y helechos.",
+      "datoDivertido": "🌻 Las plantas producen su propio alimento usando la luz del sol (fotosíntesis)."
+    },
+    {
+      "id": 4,
+      "texto": "¿En qué reino están los perros, las aves y los peces?",
+      "opciones": ["Fungi", "Protista", "Animalia"],
+      "correcta": 2,
+      "explicacion": "El reino Animalia incluye todos los animales: vertebrados e invertebrados.",
+      "datoDivertido": "🐘 El animal más grande del mundo es la ballena azul, ¡pesa como 25 elefantes!"
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué reino incluye a las algas y los protozoarios?",
+      "opciones": ["Monera", "Protista", "Fungi"],
+      "correcta": 1,
+      "explicacion": "El reino Protista tiene organismos que no encajan en los otros reinos, como algas y protozoos.",
+      "datoDivertido": "🔬 Los protozoarios viven en el agua y algunos se mueven con pequeñísimos pelos llamados cilios."
+    },
+    {
+      "id": 6,
+      "texto": "¿Los hongos son autótrofos o heterótrofos?",
+      "opciones": ["Autótrofos (hacen su comida)", "Heterótrofos (comen de otros)", "Ambos"],
+      "correcta": 1,
+      "explicacion": "Los hongos son heterótrofos: se alimentan de materia orgánica descompuesta.",
+      "datoDivertido": "🍞 El moho del pan es un hongo que se alimenta del pan."
+    },
+    {
+      "id": 7,
+      "texto": "¿Cuál de estos NO pertenece al reino Monera?",
+      "opciones": ["Bacteria", "Alga verdiazul", "Champiñón"],
+      "correcta": 2,
+      "explicacion": "El champiñón es un hongo, pertenece al reino Fungi, no a Monera.",
+      "datoDivertido": "🧫 Las bacterias viven en todos lados: en el suelo, el agua, ¡y hasta dentro de ti!"
+    },
+    {
+      "id": 8,
+      "texto": "¿Qué tienen en común todos los animales del reino Animalia?",
+      "opciones": ["Son autótrofos", "Son heterótrofos y se mueven", "Tienen plumas"],
+      "correcta": 1,
+      "explicacion": "Los animales son heterótrofos (no producen su comida) y la mayoría puede moverse.",
+      "datoDivertido": "🦑 Los animales más rápidos pueden correr, volar o nadar a gran velocidad."
+    },
+    {
+      "id": 9,
+      "texto": "¿Las plantas con flores como los naranjos pertenecen a qué reino?",
+      "opciones": ["Plantae", "Protista", "Animalia"],
+      "correcta": 0,
+      "explicacion": "Todas las plantas con y sin flores están en el reino Plantae.",
+      "datoDivertido": "🍊 Las flores atraen abejas y otros insectos para que ayuden a reproducirse."
+    },
+    {
+      "id": 10,
+      "texto": "¿Cuál de estos organismos es unicelular y pertenece al reino Protista?",
+      "opciones": ["Levadura", "Protozoario", "Bacteria"],
+      "correcta": 1,
+      "explicacion": "Los protozoarios son protistas unicelulares. Las bacterias son Monera, las levaduras son Fungi.",
+      "datoDivertido": "🦠 Algunos protozoarios viven en el agua y se ven con microscopio."
+    }
+  ]
+}
