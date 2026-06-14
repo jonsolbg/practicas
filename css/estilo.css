@@ -1,18 +1,36 @@
-/* Archivo estilo.css - se puede enlazar en todas las páginas */
+/* estilo.css */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 20px;
-    font-family: 'Segoe UI', 'Comic Neue', cursive;
+    font-family: 'Segoe UI', 'Comic Neue', 'Chalkboard SE', cursive;
 }
+
 button, .opcion {
     cursor: pointer;
     user-select: none;
 }
+
+/* Para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     .pregunta-texto {
         font-size: 1.5rem !important;
     }
     .opcion {
         font-size: 1.2rem !important;
+        padding: 12px 15px !important;
+    }
+    .btn-siguiente, .btn-voz {
+        font-size: 1.3rem !important;
+    }
+    .personaje-guia {
+        font-size: 0.9rem !important;
+        max-width: 180px;
+    }
+    .avatar {
+        font-size: 2rem !important;
     }
 }
