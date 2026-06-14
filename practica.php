@@ -17,7 +17,6 @@ if (!$data) {
     <title><?= htmlspecialchars($data['titulo'] ?? $tema) ?> 🎯</title>
     <link rel="stylesheet" href="css/estilo.css">
     <style>
-        /* Estilos extra solo para la práctica (se pueden unificar después) */
         body {
             background: <?= $data['colorFondo'] ?? '#f0f4c3' ?>;
             font-family: 'Comic Neue', 'Segoe UI', cursive;
@@ -31,7 +30,6 @@ if (!$data) {
             margin: 20px auto;
             max-width: 800px;
             box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-            transition: 0.3s;
         }
         .pregunta-texto {
             font-size: 2rem;
@@ -59,7 +57,6 @@ if (!$data) {
         }
         .opcion:hover {
             transform: scale(1.02);
-            background: <?= $data['colorBoton'] ?? '#ffa726' ?>;
         }
         .feedback {
             font-size: 1.4rem;
@@ -99,20 +96,26 @@ if (!$data) {
             padding: 10px 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             font-size: 1.2rem;
-            max-width: 200px;
+            max-width: 220px;
             text-align: center;
-            font-weight: bold;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .avatar {
-            font-size: 3rem;
-        }
+        .avatar { font-size: 3rem; }
         #mensaje-personaje {
             background: #ffefc0;
             border-radius: 20px;
             padding: 8px;
+        }
+        .btn-voz {
+            background: #ffab40;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -123,7 +126,7 @@ if (!$data) {
     <div class="opciones" id="opcionesDiv"></div>
     <div class="estrellas" id="estrellasDiv">☆☆☆☆☆</div>
     <div id="feedbackDiv" class="feedback"></div>
-    <button id="btnSiguiente" class="btn-siguiente" style="display:none;">➡️ Siguiente pregunta</button>
+    <button id="btnSiguiente" class="btn-siguiente" style="display:none;">➡️ Siguiente</button>
 </div>
 
 <div class="personaje-guia" id="personajeGuia">
@@ -132,115 +135,11 @@ if (!$data) {
 </div>
 
 <script>
-// Pasamos los datos de PHP a JavaScript
-const temaData = <?= json_encode($data) ?>;
-let preguntas = temaData.preguntas;
-let indice = 0;
-let aciertos = 0;
-let bloqueado = false;      // espera a que se presione "siguiente"
-let preguntaActual = null;
-
-function actualizarEstrellas() {
-    let estrellas = "";
-    for (let i = 0; i < aciertos; i++) estrellas += "⭐";
-    for (let i = aciertos; i < 5; i++) estrellas += "☆";
-    document.getElementById("estrellasDiv").innerText = estrellas;
-}
-
-function mostrarPregunta() {
-    if (indice >= preguntas.length) {
-        // fin del juego
-        let mensajeFinal = `🎉 ¡Misión cumplida! 🎉<br>Acertaste ${aciertos} de ${preguntas.length}.<br>${aciertos === preguntas.length ? "🏆 ¡Perfecto! 🏆" : "¡Sigue practicando!"}`;
-        document.getElementById("preguntaTexto").innerHTML = mensajeFinal;
-        document.getElementById("opcionesDiv").innerHTML = "";
-        document.getElementById("feedbackDiv").innerHTML = `<a href='index.php' class='btn-siguiente' style='display:inline-block; text-decoration:none;'>🏠 Volver al menú</a>`;
-        document.getElementById("btnSiguiente").style.display = "none";
-        return;
-    }
-
-    preguntaActual = preguntas[indice];
-    document.getElementById("preguntaTexto").innerText = preguntaActual.texto;
-    let opcionesHtml = "";
-    preguntaActual.opciones.forEach((opt, idx) => {
-        opcionesHtml += `<button class="opcion" data-opc="${idx}">${opt}</button>`;
-    });
-    document.getElementById("opcionesDiv").innerHTML = opcionesHtml;
-    document.getElementById("feedbackDiv").innerHTML = "";
-    document.getElementById("btnSiguiente").style.display = "none";
-    bloqueado = false;
-
-    // Agregar evento a cada opción
-    document.querySelectorAll(".opcion").forEach(btn => {
-        btn.addEventListener("click", () => responder(parseInt(btn.dataset.opc)));
-    });
-
-    // Mensaje de ánimo del personaje
-    cambiarMensajePersonaje("🎤 Lee bien y elige la respuesta 💪");
-}
-
-function responder(opcElegida) {
-    if (bloqueado) return;
-    const esCorrecta = (opcElegida === preguntaActual.correcta);
-    bloqueado = true;
-
-    let feedbackHtml = "";
-    if (esCorrecta) {
-        aciertos++;
-        actualizarEstrellas();
-        feedbackHtml = `<span style="color:green; font-size:2rem;">✅ ¡Correcto!</span><br>${preguntaActual.explicacion}`;
-        cambiarMensajePersonaje("🎉 ¡Excelente! +1 estrella 🎉");
-        // Sonido opcional si se quiere (podemos simular con vibración o solo visual)
-    } else {
-        const correctaTexto = preguntaActual.opciones[preguntaActual.correcta];
-        feedbackHtml = `<span style="color:red; font-size:2rem;">❌ Casi...</span><br>La respuesta correcta es: <strong>${correctaTexto}</strong><br>${preguntaActual.explicacion}`;
-        cambiarMensajePersonaje("😅 ¡Ánimo! Revisa por qué era esa respuesta.");
-    }
-    if (preguntaActual.datoDivertido) {
-        feedbackHtml += `<div class="dato-div">🎲 Dato curioso: ${preguntaActual.datoDivertido}</div>`;
-    }
-    document.getElementById("feedbackDiv").innerHTML = feedbackHtml;
-    document.getElementById("btnSiguiente").style.display = "block";
-}
-
-function cambiarMensajePersonaje(mensaje) {
-    let msgDiv = document.getElementById("mensaje-personaje");
-    if (msgDiv) {
-        msgDiv.innerText = mensaje;
-        // Animación leve
-        msgDiv.style.transform = "scale(1.05)";
-        setTimeout(() => { msgDiv.style.transform = "scale(1)"; }, 300);
-    }
-}
-
-document.getElementById("btnSiguiente").addEventListener("click", () => {
-    indice++;
-    mostrarPregunta();
-});
-
-// Iniciar
-mostrarPregunta();
-actualizarEstrellas();
-
-// Agregar síntesis de voz opcional (solo si el navegador lo soporta)
-if ('speechSynthesis' in window) {
-    let botonVoz = document.createElement("button");
-    botonVoz.innerText = "🔊 Leer pregunta";
-    botonVoz.style.background = "#ffab40";
-    botonVoz.style.border = "none";
-    botonVoz.style.borderRadius = "30px";
-    botonVoz.style.padding = "8px 20px";
-    botonVoz.style.fontSize = "1.2rem";
-    botonVoz.style.cursor = "pointer";
-    botonVoz.style.marginBottom = "15px";
-    botonVoz.onclick = () => {
-        let texto = document.getElementById("preguntaTexto").innerText;
-        let utterance = new SpeechSynthesisUtterance(texto);
-        utterance.lang = 'es-ES';
-        speechSynthesis.cancel();
-        speechSynthesis.speak(utterance);
-    };
-    document.querySelector(".contenedor-pregunta").prepend(botonVoz);
-}
+    // Pasamos los datos del tema a JavaScript
+    const temaData = <?= json_encode($data) ?>;
 </script>
+<script src="js/script.js"></script>
+<script src="js/personaje.js"></script>
+<script src="js/voz.js"></script>
 </body>
 </html>
