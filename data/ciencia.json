@@ -1,0 +1,103 @@
+{
+  "titulo": "🧬 Ciencia y tecnología en la medicina",
+  "colorFondo": "#e0f7fa",
+  "colorBoton": "#00838f",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué es la ciencia?",
+      "opciones": ["Magia para curar", "Saber que se obtiene observando y experimentando", "Un aparato médico"],
+      "correcta": 1,
+      "explicacion": "La ciencia es el conocimiento que obtenemos observando la naturaleza y haciendo experimentos.",
+      "datoDivertido": "🔬 ¡La ciencia nos ayuda a entender por qué llueve, por qué nos enfermamos y cómo funciona el cuerpo!"
+    },
+    {
+      "id": 2,
+      "texto": "¿Qué es la tecnología?",
+      "opciones": ["Usar conocimientos para resolver problemas", "Solo computadoras", "Un tipo de medicina"],
+      "correcta": 0,
+      "explicacion": "La tecnología usa el conocimiento para crear soluciones que nos ayuden en la vida diaria.",
+      "datoDivertido": "💡 Desde un lápiz hasta un robot quirúrgico, ¡todo es tecnología!"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué es un trasplante?",
+      "opciones": ["Poner un aparato artificial", "Transferir un órgano de un donante a un receptor", "Una vacuna"],
+      "correcta": 1,
+      "explicacion": "Un trasplante es cuando se toma un órgano sano de una persona (donante) y se pone en otra que lo necesita.",
+      "datoDivertido": "❤️ El primer trasplante de corazón exitoso fue en 1967. ¡El paciente vivió 18 días más!"
+    },
+    {
+      "id": 4,
+      "texto": "¿Qué hace un reemplazo médico?",
+      "opciones": ["Poner un órgano de otra persona", "Poner un aparato artificial en lugar de un órgano dañado", "Tomar una pastilla"],
+      "correcta": 1,
+      "explicacion": "El reemplazo usa dispositivos artificiales (como una pierna robótica) para cumplir la función del órgano original.",
+      "datoDivertido": "🦿 Hay piernas biónicas que se mueven con la mente gracias a sensores especiales."
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué es la clonación?",
+      "opciones": ["Crear copias idénticas de seres vivos", "Una vacuna", "Un aparato de rayos X"],
+      "correcta": 0,
+      "explicacion": "La clonación permite obtener copias genéticamente idénticas de un ser vivo.",
+      "datoDivertido": "🐑 ¡La oveja Dolly fue el primer mamífero clonado en 1996!"
+    },
+    {
+      "id": 6,
+      "texto": "¿Para qué sirve una vacuna?",
+      "opciones": ["Curar un resfriado", "Enseñar al cuerpo a defenderse de enfermedades", "Ver huesos rotos"],
+      "correcta": 1,
+      "explicacion": "La vacuna entrena a tu sistema inmunológico para que reconozca y pelee contra enfermedades.",
+      "datoDivertido": "💉 Las vacunas han salvado más vidas que cualquier otro invento en la historia."
+    },
+    {
+      "id": 7,
+      "texto": "¿Qué es un implante médico?",
+      "opciones": ["Un dispositivo que sustituye o ayuda a una parte del cuerpo", "Una operación", "Un tipo de bacteria"],
+      "correcta": 0,
+      "explicacion": "Los implantes son aparatos que se colocan dentro del cuerpo para mejorar su funcionamiento.",
+      "datoDivertido": "🦷 Los implantes dentales son como tornillos que reemplazan raíces de dientes perdidos."
+    },
+    {
+      "id": 8,
+      "texto": "¿Para qué sirven los Rayos X?",
+      "opciones": ["Ver fracturas de huesos", "Hacer cirugías", "Tratar el cáncer"],
+      "correcta": 0,
+      "explicacion": "Los Rayos X atraviesan el cuerpo y muestran los huesos. Así los doctores ven si hay fracturas.",
+      "datoDivertido": "☢️ ¡Los Rayos X se descubrieron por accidente en 1895 mientras se hacía un experimento con luz!"
+    },
+    {
+      "id": 9,
+      "texto": "¿Qué hacen los Rayos Láser en medicina?",
+      "opciones": ["Ver órganos internos", "Cortar o destruir tejido con precisión", "Tomar radiografías"],
+      "correcta": 1,
+      "explicacion": "El láser permite hacer cirugías muy precisas, como corregir la vista o eliminar manchas.",
+      "datoDivertido": "👁️ La cirugía láser de ojos dura solo unos minutos y puedes ver mejor al día siguiente."
+    },
+    {
+      "id": 10,
+      "texto": "¿Qué es la bomba de cobalto?",
+      "opciones": ["Una bomba de agua", "Un equipo para tratar el cáncer con radioterapia", "Un aparato para ver bebés"],
+      "correcta": 1,
+      "explicacion": "La bomba de cobalto emite radiación para destruir células cancerosas.",
+      "datoDivertido": "⚛️ El cobalto-60 es un material radiactivo que se usa para tratar tumores."
+    },
+    {
+      "id": 11,
+      "texto": "¿Para qué se usa el ultrasonido?",
+      "opciones": ["Ver huesos rotos", "Usar ondas sonoras para ver dentro del cuerpo", "Tratar el cáncer"],
+      "correcta": 1,
+      "explicacion": "El ultrasonido usa ondas sonoras de alta frecuencia para crear imágenes del interior del cuerpo.",
+      "datoDivertido": "👶 El ultrasonido es famoso porque permite ver a los bebés antes de nacer."
+    },
+    {
+      "id": 12,
+      "texto": "¿Cuál de estos es un aparato tecnológico usado en medicina?",
+      "opciones": ["Microscopio escolar", "Rayos Láser", "Telescopio"],
+      "correcta": 1,
+      "explicacion": "Los Rayos Láser se usan en cirugías. Los telescopios son para ver el espacio, no para medicina.",
+      "datoDivertido": "🏥 Los hospitales modernos tienen muchos aparatos tecnológicos que salvan vidas."
+    }
+  ]
+}
