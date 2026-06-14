@@ -1,0 +1,31 @@
+{
+  "titulo": "🦎 Animales Vertebrados",
+  "colorFondo": "#fff3e0",
+  "colorBoton": "#ff9800",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Cuál de estos es un mamífero?",
+      "opciones": ["Pingüino", "Ballena", "Serpiente"],
+      "correcta": 1,
+      "explicacion": "La ballena es un mamífero marino, amamanta a sus crías.",
+      "datoDivertido": "Las ballenas tienen pulmones y suben a respirar."
+    },
+    {
+      "id": 2,
+      "texto": "¿Los reptiles tienen sangre...?",
+      "opciones": ["Caliente", "Fría", "Salada"],
+      "correcta": 1,
+      "explicacion": "Son de sangre fría, necesitan el sol para calentarse.",
+      "datoDivertido": "Las serpientes toman el sol en las rocas."
+    },
+    {
+      "id": 3,
+      "texto": "¿Cómo respiran los peces?",
+      "opciones": ["Pulmones", "Branquias", "Piel"],
+      "correcta": 1,
+      "explicacion": "Los peces toman oxígeno del agua a través de las branquias.",
+      "datoDivertido": "Los tiburones tienen varias hendiduras branquiales."
+    }
+  ]
+}
