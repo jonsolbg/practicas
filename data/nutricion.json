@@ -1,0 +1,23 @@
+{
+  "titulo": "🥗 Nutrición y salud",
+  "colorFondo": "#f1f8e9",
+  "colorBoton": "#558b2f",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Cuál de estos alimentos es mejor para cuidar los riñones?",
+      "opciones": ["Papas fritas", "Agua natural", "Embutidos"],
+      "correcta": 1,
+      "explicacion": "Tomar agua ayuda a los riñones a eliminar toxinas.",
+      "datoDivertido": "💧 Se recomienda tomar 6 a 8 vasos de agua al día."
+    },
+    {
+      "id": 2,
+      "texto": "Comer mucha sal puede causar...",
+      "opciones": ["Presión alta", "Mejor memoria", "Más energía"],
+      "correcta": 0,
+      "explicacion": "El exceso de sal eleva la presión arterial y daña los riñones.",
+      "datoDivertido": "🧂 La OMS recomienda menos de 5g de sal al día (una cucharadita)."
+    }
+  ]
+}
