@@ -1,0 +1,101 @@
+{
+  "titulo": "📝 Mayúsculas: ¡Escribimos bonito!",
+  "colorFondo": "#e3f2fd",
+  "colorBoton": "#1565c0",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Cuál de estas palabras debe ir con MAYÚSCULA siempre?",
+      "opciones": ["perro", "españa", "rojo"],
+      "correcta": 1,
+      "explicacion": "Los nombres de países como España siempre se escriben con mayúscula inicial.",
+      "datoDivertido": "🌍 ¡Los países y las ciudades también llevan mayúscula!"
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Qué palabra está escrita CORRECTAMENTE?",
+      "opciones": ["martes", "Martes", "mArtEs"],
+      "correcta": 0,
+      "explicacion": "Los días de la semana van con minúscula: martes.",
+      "datoDivertido": "📆 El único día que a veces se escribe con mayúscula es cuando inicia una oración."
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Cuál oración está BIEN escrita?",
+      "opciones": ["El río amazonas es muy largo.", "El Río Amazonas es muy largo.", "el río amazonas es muy largo."],
+      "correcta": 1,
+      "explicacion": "Los nombres de ríos como Amazonas llevan mayúscula, y 'Río' también porque es parte del nombre.",
+      "datoDivertido": "🏞️ El Amazonas es el río más caudaloso del mundo."
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Cuándo usamos mayúscula?",
+      "opciones": ["Después de una coma", "Al inicio de una oración", "En medio de una palabra"],
+      "correcta": 1,
+      "explicacion": "Siempre usamos mayúscula al comenzar una oración y en los nombres propios.",
+      "datoDivertido": "✏️ ¡Toda oración empieza con mayúscula y termina con punto!"
+    },
+    {
+      "id": 5,
+      "tipo": "vf",
+      "texto": "Los días de la semana se escriben con mayúscula: Lunes, Martes, Miércoles...",
+      "correcta": false,
+      "explicacion": "En español, los días de la semana se escriben con minúscula: lunes, martes.",
+      "datoDivertido": "📅 En inglés sí llevan mayúscula, ¡pero en español no!"
+    },
+    {
+      "id": 6,
+      "tipo": "vf",
+      "texto": "Los nombres de personas como 'ana', 'juan' y 'maría' se escriben con mayúscula.",
+      "correcta": true,
+      "explicacion": "Ana, Juan y María son nombres propios y siempre llevan mayúscula inicial.",
+      "datoDivertido": "👧 ¡Tu nombre también debe empezar siempre con mayúscula!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "Los meses del año se escriben con mayúscula: Enero, Febrero, Marzo.",
+      "correcta": false,
+      "explicacion": "Los meses del año se escriben con minúscula: enero, febrero, marzo.",
+      "datoDivertido": "📆 Al igual que los días, los meses van con minúscula en español."
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "Después de un punto, siempre se escribe con mayúscula.",
+      "correcta": true,
+      "explicacion": "Correcto. Después de un punto se empieza una nueva oración con mayúscula.",
+      "datoDivertido": "🔴 El punto seguido y el punto aparte siempre llevan mayúscula después."
+    },
+    {
+      "id": 9,
+      "tipo": "asociar",
+      "texto": "Une cada palabra con la razón por la que lleva mayúscula",
+      "pares": [
+        {"texto": "México", "coincide": "Nombre de país"},
+        {"texto": "Carlos", "coincide": "Nombre de persona"},
+        {"texto": "Navidad", "coincide": "Fiesta o celebración"},
+        {"texto": "Luna", "coincide": "Astro o cuerpo celeste"}
+      ],
+      "explicacion": "¡Muy bien! Las mayúsculas se usan para nombres propios, países, personas y festividades.",
+      "datoDivertido": "⭐ La Luna, el Sol y Marte también llevan mayúscula."
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "Une cada oración con la palabra que debe ir en MAYÚSCULA",
+      "pares": [
+        {"texto": "mi amigo se llama pedro.", "coincide": "Pedro"},
+        {"texto": "yo vivo en colombia.", "coincide": "Colombia"},
+        {"texto": "el próximo año es 2025.", "coincide": "El"},
+        {"texto": "el volcán popocatépetl está activo.", "coincide": "Popocatépetl"}
+      ],
+      "explicacion": "¡Excelente! Los nombres propios siempre con mayúscula.",
+      "datoDivertido": "🗺️ También los continentes llevan mayúscula: América, Europa, África."
+    }
+  ]
+}

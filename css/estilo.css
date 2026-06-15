@@ -34,3 +34,58 @@ button, .opcion {
         font-size: 2rem !important;
     }
 }
+
+
+/* ============================================
+   VERDADERO / FALSO - Botones en fila horizontal
+   ============================================ */
+
+/* Contenedor de los botones V/F */
+.vf-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Cada botón individual */
+.vf-container .vf-btn {
+    width: 180px;
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Efecto hover en computadora */
+.vf-container .vf-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+/* Efecto al hacer clic */
+.vf-container .vf-btn:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   PARA MÓVILES (pantallas muy pequeñas)
+   Si no hay espacio, se apilan verticalmente
+   ============================================ */
+@media (max-width: 480px) {
+    .vf-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .vf-container .vf-btn {
+        width: 200px;
+        font-size: 1.3rem;
+        padding: 12px 20px;
+    }
+}
