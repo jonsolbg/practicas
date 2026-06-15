@@ -13,8 +13,16 @@ practicas/
 │   ├── index.php              # ← Panel para padres
 │   └── datos/                 # ← Aquí se guardan los JSON
 │       └── 2025-01-15_14-30-25_abc123.json
+|
 ├── css/
+│   └── estilo.css
+|
 ├── js/
+│   ├── personaje.js
+|   ├── scripts.js
+|   ├── tipos_preguntas.js
+│   └── voz.json
+|
 ├── data/
 │   ├── ciencias/           # ← carpeta para temas de ciencias
 │   │   ├── renal.json
