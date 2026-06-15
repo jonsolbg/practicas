@@ -40,6 +40,14 @@ function reproducirSonido(id) {
 // Llamar al inicio
 cargarConfigSonidos();
 
+// Detectar tipo de pregunta para respuestas (retrocompatibilidad)
+function obtenerTipoRespuesta(pregunta) {
+    if (pregunta.tipo) return pregunta.tipo;
+    if (pregunta.opciones && Array.isArray(pregunta.opciones)) return 'multiple';
+    if (pregunta.pares && Array.isArray(pregunta.pares)) return 'asociar';
+    return 'multiple';
+}
+
 // ============================================
 // ACTUALIZAR ESTRELLAS Y RACHA
 // ============================================
