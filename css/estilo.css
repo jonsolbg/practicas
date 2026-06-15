@@ -60,6 +60,19 @@ button, .opcion {
     border-radius: 50px;
     cursor: pointer;
     transition: transform 0.2s, filter 0.2s;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Botón VERDADERO - Azul (como los de múltiple) */
+.vf-container .vf-btn[data-valor="true"] {
+    background: #1565c0;
+}
+
+/* Botón FALSO - Rojo (sigue igual) */
+.vf-container .vf-btn[data-valor="false"] {
+    background: #f44336;
 }
 
 /* Efecto hover en computadora */
@@ -73,9 +86,15 @@ button, .opcion {
     transform: scale(0.98);
 }
 
+/* Estado deshabilitado (después de responder) */
+.vf-container .vf-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
 /* ============================================
    PARA MÓVILES (pantallas muy pequeñas)
-   Si no hay espacio, se apilan verticalmente
    ============================================ */
 @media (max-width: 480px) {
     .vf-container {
