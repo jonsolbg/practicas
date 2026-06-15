@@ -3,14 +3,32 @@
 // PANEL DE PROGRESO - PARA PADRES
 // ============================================
 
+session_start();
+
 // Contraseña simple (cámbiala por la que quieras)
-$clave_acceso = "admin123";  // ¡Cámbiala!
+$clave_acceso = "admin123";
 
 // Verificar autenticación
 $autenticado = false;
+
+// Procesar cierre de sesión
+if (isset($_POST['cerrar_sesion'])) {
+    session_destroy();
+    header("Location: index.php");
+    exit;
+}
+
+// Procesar vaciar historial
+if (isset($_POST['vaciar_historial'])) {
+    $archivos = glob("datos/*.json");
+    foreach ($archivos as $archivo) {
+        unlink($archivo);
+    }
+    $mensaje_vaciar = "✅ Historial vaciado correctamente.";
+}
+
 if (isset($_POST['clave']) && $_POST['clave'] === $clave_acceso) {
     $autenticado = true;
-    session_start();
     $_SESSION['padre_autenticado'] = true;
 } elseif (isset($_SESSION['padre_autenticado']) && $_SESSION['padre_autenticado'] === true) {
     $autenticado = true;
@@ -30,7 +48,6 @@ function leerProgresos($directorio = "datos") {
         }
     }
     
-    // Ordenar por fecha (más reciente primero)
     usort($progresos, function($a, $b) {
         return strtotime($b['fecha']) - strtotime($a['fecha']);
     });
@@ -122,15 +139,46 @@ $stats = obtenerEstadisticas($progresos);
             color: #666;
             margin-top: 10px;
         }
-        .logout-btn {
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.02);
+        }
+        .btn-cerrar {
             background: #ff9800;
             color: white;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 15px;
-            font-size: 0.9rem;
+        }
+        .btn-vaciar {
+            background: #f44336;
+            color: white;
+        }
+        .btn-volver {
+            background: #4caf50;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .mensaje {
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            text-align: center;
         }
         .stats-grid {
             display: grid;
@@ -229,27 +277,17 @@ $stats = obtenerEstadisticas($progresos);
             font-size: 1.1rem;
             cursor: pointer;
         }
-        .volver-btn {
-            background: #4caf50;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .vaciar-btn {
-            background: #f44336;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
         .fecha {
             font-size: 0.8rem;
             color: #999;
+        }
+        .footer-buttons {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -271,19 +309,19 @@ $stats = obtenerEstadisticas($progresos);
     <div class="header">
         <h1>📊 Panel de Progreso</h1>
         <p>¡Mira lo bien que va tu hijo! 🎉</p>
-        <form method="POST" style="display: inline;">
-            <button type="submit" name="cerrar" value="1" class="logout-btn">🚪 Cerrar sesión</button>
-        </form>
-        <?php if (isset($_POST['vaciar']) && $_POST['vaciar'] === '1'): ?>
-            <?php
-            $archivos = glob("datos/*.json");
-            foreach ($archivos as $archivo) {
-                unlink($archivo);
-            }
-            echo "<p style='color:green; margin-top:10px;'>✅ Historial vaciado correctamente.</p>";
-            header("Refresh:2");
-            ?>
+        
+        <?php if (isset($mensaje_vaciar)): ?>
+            <div class="mensaje"><?php echo $mensaje_vaciar; ?></div>
         <?php endif; ?>
+        
+        <div class="btn-group">
+            <form method="POST" style="display: inline;">
+                <button type="submit" name="cerrar_sesion" class="btn btn-cerrar">🚪 Cerrar sesión</button>
+            </form>
+            <form method="POST" style="display: inline;" onsubmit="return confirm('¿Seguro que quieres borrar TODO el historial? Esta acción NO se puede deshacer.')">
+                <button type="submit" name="vaciar_historial" class="btn btn-vaciar">🗑️ Vaciar historial</button>
+            </form>
+        </div>
     </div>
 
     <!-- Tarjetas de estadísticas -->
@@ -393,20 +431,9 @@ $stats = obtenerEstadisticas($progresos);
         <?php endif; ?>
     </div>
 
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="../index.php" class="volver-btn">🏠 Volver al menú principal</a>
-        <form method="POST" style="display: inline;">
-            <button type="submit" name="vaciar" value="1" class="vaciar-btn" onclick="return confirm('¿Seguro que quieres borrar todo el historial? Esta acción no se puede deshacer.')">🗑️ Vaciar historial</button>
-        </form>
+    <div class="footer-buttons">
+        <a href="../index.php" class="btn btn-volver" style="text-decoration: none;">🏠 Volver al menú principal</a>
     </div>
-
-    <?php
-    // Cerrar sesión
-    if (isset($_POST['cerrar'])) {
-        session_destroy();
-        header("Refresh:0");
-    }
-    ?>
 <?php endif; ?>
 </div>
 </body>
