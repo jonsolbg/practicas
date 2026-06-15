@@ -1,0 +1,103 @@
+{
+  "titulo": "🐁 Experimentación con animales",
+  "colorFondo": "#fce4ec",
+  "colorBoton": "#c62828",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué es la experimentación con animales?",
+      "opciones": ["Usar animales para descubrir medicamentos", "Jugar con animales en el laboratorio", "Dar de comer a los animales"],
+      "correcta": 0,
+      "explicacion": "Es cuando los científicos usan animales en investigaciones para crear medicamentos y tratamientos para personas.",
+      "datoDivertido": "🐭 Los ratones son los animales más usados porque son pequeños y se parecen genéticamente a los humanos."
+    },
+    {
+      "id": 2,
+      "texto": "¿Qué animales se usan comúnmente en experimentos?",
+      "opciones": ["Perros y gatos domésticos", "Ratones, conejos y primates", "Animales de granja"],
+      "correcta": 1,
+      "explicacion": "Los más usados son ratones, ratas, conejos y algunos primates como monos.",
+      "datoDivertido": "🐵 Los primates se usan poco porque son muy parecidos a los humanos y hay leyes que los protegen."
+    },
+    {
+      "id": 3,
+      "texto": "¿Por qué algunas personas están en contra de la experimentación animal?",
+      "opciones": ["Porque los animales pueden sufrir", "Porque es muy cara", "Porque no funciona"],
+      "correcta": 0,
+      "explicacion": "Muchas personas creen que no está bien hacer sufrir a los animales, aunque sea para ayudar a personas enfermas.",
+      "datoDivertido": "🤝 Organizaciones como la Liga Internacional de los Derechos del Animal luchan por proteger a los animales."
+    },
+    {
+      "id": 4,
+      "texto": "¿Cómo se llama la ley contra el maltrato animal en Costa Rica?",
+      "opciones": ["Ley 7451", "Ley 26668", "Ley 5000"],
+      "correcta": 0,
+      "explicacion": "La Ley N.° 7451 protege a los animales del maltrato y la crueldad en Costa Rica.",
+      "datoDivertido": "📜 ¡Costa Rica fue uno de los primeros países de América en tener una ley tan fuerte contra el maltrato animal!"
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué establece el Decreto Ejecutivo 26668?",
+      "opciones": ["Prohíbe toda experimentación", "Regula la experimentación con animales", "Premia a los científicos"],
+      "correcta": 1,
+      "explicacion": "Este decreto pone reglas para que los científicos traten bien a los animales y busquen métodos que no los usen.",
+      "datoDivertido": "🔬 El decreto fomenta usar alternativas como simulaciones por computadora en lugar de animales."
+    },
+    {
+      "id": 6,
+      "texto": "¿Qué significa tener 'conciencia ética' sobre experimentos con seres vivos?",
+      "opciones": ["Pensar si está bien o mal causar daño", "Solo seguir reglas", "No importa lo que pase"],
+      "correcta": 0,
+      "explicacion": "Es preguntarnos si el beneficio para las personas vale el posible sufrimiento del animal.",
+      "datoDivertido": "🤔 La ética nos ayuda a decidir qué está bien y qué está mal, incluso si nadie nos está mirando."
+    },
+    {
+      "id": 7,
+      "texto": "¿Cuál es una alternativa a usar animales en experimentos?",
+      "opciones": ["Simulaciones por computadora", "Usar más animales", "Cancelar la investigación"],
+      "correcta": 0,
+      "explicacion": "Hoy existen simulaciones en computadora, cultivos de células y otros métodos que no usan animales.",
+      "datoDivertido": "💻 Los científicos están creando 'órganos en chips' para probar medicamentos sin animales."
+    },
+    {
+      "id": 8,
+      "texto": "¿Qué busca la Ley 7451 en Costa Rica?",
+      "opciones": ["Castigar el maltrato animal", "Permitir todo experimento", "Vender animales"],
+      "correcta": 0,
+      "explicacion": "Esta ley protege a los animales y castiga a quienes los maltraten o los maten sin razón.",
+      "datoDivertido": "⚖️ En Costa Rica, maltratar un animal puede llevar a la cárcel o a pagar una multa grande."
+    },
+    {
+      "id": 9,
+      "texto": "¿Qué pregunta ética es importante antes de un experimento con animales?",
+      "opciones": ["¿El beneficio vale el sufrimiento?", "¿Cuánto cuesta?", "¿Qué color tiene el animal?"],
+      "correcta": 0,
+      "explicacion": "Hay que pensar si ayudar a personas enfermas justifica el dolor que puede sentir el animal.",
+      "datoDivertido": "⚖️ Muchos países tienen comités de ética que revisan cada experimento antes de permitirlo."
+    },
+    {
+      "id": 10,
+      "texto": "¿Cuál de estas es una razón válida para preocuparse por la experimentación animal?",
+      "opciones": ["Los animales sienten dolor", "Los animales son feos", "Los animales no sirven"],
+      "correcta": 0,
+      "explicacion": "Los animales sienten miedo y dolor como nosotros, por eso debemos tratarlos con respeto.",
+      "datoDivertido": "🐶 Los perros, ratones y conejos tienen sistemas nerviosos muy parecidos al nuestro. ¡También sienten!"
+    },
+    {
+      "id": 11,
+      "texto": "¿Qué deben hacer los científicos antes de experimentar con animales?",
+      "opciones": ["Buscar alternativas sin animales", "Empezar sin pensar", "Usar cualquier animal"],
+      "correcta": 0,
+      "explicacion": "Los científicos responsables primero buscan si hay otros métodos que no usen animales vivos.",
+      "datoDivertido": "🌱 La regla de las '3 erres' es: Reemplazar, Reducir y Refinar el uso de animales."
+    },
+    {
+      "id": 12,
+      "texto": "¿Qué aprendemos con el tema de experimentación animal?",
+      "opciones": ["A respetar a los seres vivos", "A hacer experimentos", "A ignorar a los animales"],
+      "correcta": 0,
+      "explicacion": "Aprendemos que el conocimiento científico es importante, pero también debemos cuidar y respetar la vida.",
+      "datoDivertido": "❤️ ¡Todos los seres vivos merecen respeto, desde una hormiga hasta un elefante!"
+    }
+  ]
+}
