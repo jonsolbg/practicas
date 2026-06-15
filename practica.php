@@ -193,6 +193,13 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
             .avatar { font-size: 2rem !important; }
             .estrellas { font-size: 1.8rem; letter-spacing: 5px; }
         }
+
+        /* Ocultar personaje en móviles (pantallas menores a 768px) */
+        @media (max-width: 768px) {
+            .ocultar-movil {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -206,7 +213,7 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     <button id="btnReiniciar" class="btn-reiniciar" style="display:none;">🔄 Reiniciar</button>
 </div>
 
-<div class="personaje-guia" id="personajeGuia">
+<div class="personaje-guia ocultar-movil" id="personajeGuia">
     <div class="avatar">🧠🐝</div>
     <div id="mensaje-personaje">¡Hola! Lee con atención.</div>
 </div>

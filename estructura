@@ -2,7 +2,12 @@ practicas/
 │
 ├── index.php
 ├── practica.php
+├── guardar_progreso.php
 ├── config.json
+├── progreso/
+│   ├── index.php              # ← Panel para padres
+│   └── datos/                 # ← Aquí se guardan los JSON
+│       └── 2025-01-15_14-30-25_abc123.json
 ├── css/
 ├── js/
 ├── data/
