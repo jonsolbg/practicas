@@ -1,11 +1,12 @@
 {
   "ordenCategorias": [
-    "espanol",
+    "espanol2","espanol",
     "ciencias"
   ],
   "nombresBonitos": {
     "ciencias": "🔬 Ciencias Naturales",
     "espanol": "📚 Lenguaje y Español",
+    "espanol2": "📚 Lenguaje y Español 2.0",
     "matematicas": "🧮 Matemáticas",
     "historia": "📜 Historia",
     "geografia": "🌎 Geografía",

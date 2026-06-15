@@ -1,0 +1,182 @@
+{
+  "titulo": "📚 Géneros Literarios: Narrativa, Lírica y Drama",
+  "colorFondo": "#CE93D8",
+  "colorBoton": "#8E24AA",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Qué género literario tiene un narrador que cuenta acciones?",
+      "opciones": [
+        "Lírico",
+        "Narrativo",
+        "Dramático",
+        "Poético"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ En el género narrativo un narrador relata las aventuras de los personajes.",
+      "datoDivertido": "📖 Cuentos, novelas y leyendas pertenecen al género narrativo."
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cómo se escribe principalmente el género lírico?",
+      "opciones": [
+        "En prosa",
+        "En diálogos",
+        "En verso",
+        "En capítulos"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ El género lírico (poesía) se escribe en verso, con líneas cortas que forman estrofas.",
+      "datoDivertido": "🎵 La lírica expresa sentimientos como el amor, la tristeza o la alegría."
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Qué caracteriza al género dramático?",
+      "opciones": [
+        "Tiene un narrador",
+        "Usa muchos adjetivos",
+        "Está escrito para ser representado por actores",
+        "Siempre tiene final feliz"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ El drama o teatro está escrito en diálogos para ser representado en un escenario.",
+      "datoDivertido": "🎭 En el teatro no hay narrador: ¡los personajes hablan directamente!"
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué diferencia una leyenda de un cuento?",
+      "opciones": [
+        "La leyenda es más larga",
+        "La leyenda tiene muchos personajes",
+        "La leyenda nace de forma oral y mezcla realidad con magia",
+        "La leyenda siempre tiene moraleja"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ Las leyendas se transmiten oralmente y combinan hechos reales con elementos sobrenaturales.",
+      "datoDivertido": "🗣️ Las leyendas explican el origen de montañas, ríos o animales. ¡Son historias con magia!"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Cuál es una característica de la novela?",
+      "opciones": [
+        "Es muy corta",
+      "Tiene pocos personajes",
+        "Tiene tramas secundarias y muchos personajes",
+        "Siempre tiene rima"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ La novela es extensa, con muchos personajes que evolucionan y tramas secundarias.",
+      "datoDivertido": "📚 Una novela puede tener cientos de páginas. ¡Es como un cuento gigante!"
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Qué tipo de texto es 'El Principito'?",
+      "opciones": [
+        "Poema",
+        "Leyenda",
+        "Novela corta o cuento largo",
+        "Obra de teatro"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'El Principito' es una novela corta que mezcla narrativa con enseñanzas profundas.",
+      "datoDivertido": "🌟 El Principito ha sido traducido a más de 300 idiomas. ¡Es famoso en todo el mundo!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "El género narrativo se escribe en prosa, es decir, en renglones completos y párrafos.",
+      "correcta": true,
+      "explicacion": "✅ Correcto. La prosa es la forma natural de escribir, como en cuentos y novelas.",
+      "datoDivertido": "✍️ La prosa ocupa todo el ancho de la página. ¡El verso es más corto y se corta antes!"
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "En una obra de teatro, hay un narrador que cuenta lo que piensan los personajes.",
+      "correcta": false,
+      "explicacion": "❌ Es falso. En el teatro no hay narrador: los personajes hablan directamente en diálogos.",
+      "datoDivertido": "🎬 En el cine o teatro, ¡los actores son los personajes! No hay nadie contando la historia."
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "La poesía pertenece al género lírico.",
+      "correcta": true,
+      "explicacion": "✅ Correcto. La poesía expresa sentimientos y emociones, y se escribe en verso.",
+      "datoDivertido": "📝 La palabra 'lírica' viene de 'lira', un instrumento musical que acompañaba a los poemas."
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "📖 Une cada género literario con su característica principal:",
+      "pares": [
+        {
+          "texto": "Narrativo",
+          "coincide": "Tiene un narrador"
+        },
+        {
+          "texto": "Lírico",
+          "coincide": "Expresa sentimientos en verso"
+        },
+        {
+          "texto": "Dramático",
+          "coincide": "Escrito en diálogos para actuar"
+        }
+      ],
+      "explicacion": "🎭 Los tres géneros principales usan las palabras de forma diferente.",
+      "datoDivertido": "🎪 En una obra de teatro, los actores dan vida a los personajes sobre el escenario."
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "📚 Une cada tipo de texto narrativo con su descripción:",
+      "pares": [
+        {
+          "texto": "Cuento",
+          "coincide": "Corto, pocos personajes"
+        },
+        {
+          "texto": "Novela",
+          "coincide": "Extensa, muchos personajes"
+        },
+        {
+          "texto": "Leyenda",
+          "coincide": "Oral, mezcla realidad y magia"
+        }
+      ],
+      "explicacion": "🌿 Cada tipo de narración tiene su propia personalidad y propósito.",
+      "datoDivertido": "🏔️ Las leyendas explican cómo se formaron montañas, lagos y animales. ¡Son mágicas!"
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🎭 Une cada ejemplo con el género literario que corresponde:",
+      "pares": [
+        {
+          "texto": "Caperucita Roja",
+          "coincide": "Narrativo (cuento)"
+        },
+        {
+          "texto": "Romeo y Julieta",
+          "coincide": "Dramático (teatro)"
+        },
+        {
+          "texto": "Canción de una noche en la montaña",
+          "coincide": "Lírico (poesía)"
+        },
+        {
+          "texto": "La leyenda del volcán Poás",
+          "coincide": "Narrativo (leyenda)"
+        }
+      ],
+      "explicacion": "📚 Los ejemplos reales ayudan a reconocer cada género literario.",
+      "datoDivertido": "🌋 Costa Rica tiene leyendas hermosas sobre sus volcanes y sus historias mágicas."
+    }
+  ]
+}

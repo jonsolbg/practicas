@@ -1,0 +1,200 @@
+{
+  "titulo": "📖 Vocabulario y Semántica: Palabras Vivas",
+  "colorFondo": "#FFB74D",
+  "colorBoton": "#F57C00",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Qué caracteriza a una familia léxica?",
+      "opciones": [
+        "Palabras que riman entre sí",
+        "Palabras que comparten la misma raíz",
+        "Palabras que tienen el mismo número de sílabas",
+        "Palabras que significan lo mismo"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ Las familias léxicas comparten una raíz común, como 'mar', 'marino', 'maremoto'.",
+      "datoDivertido": "🌊 La raíz es el corazón de la palabra. ¡Toda la familia la hereda!"
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cuál es un ejemplo de campo semántico?",
+      "opciones": [
+        "Pan, panadero, panecillo",
+        "Luz, alumbrar, lucero",
+        "Perro, gato, hámster, pez",
+        "Flor, florecer, florido"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Perro, gato, hámster, pez' pertenecen al campo semántico de las mascotas.",
+      "datoDivertido": "🐾 En un campo semántico, las palabras son como amigos con un interés común."
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Qué significa la locución 'tirar la toalla'?",
+      "opciones": [
+        "Lavar la ropa",
+        "Rendirse o abandonar",
+        "Limpiarse el sudor",
+        "Empezar una pelea"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ 'Tirar la toalla' significa rendirse, como un boxeador que abandona la pelea.",
+      "datoDivertido": "🥊 Esta expresión nació en el boxeo: ¡el entrenador tira la toalla al ring cuando su peleador ya no puede más!"
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué son los sinónimos?",
+      "opciones": [
+        "Palabras opuestas",
+        "Palabras que suenan igual",
+        "Palabras con significado parecido",
+        "Palabras que se escriben igual"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ Los sinónimos tienen significados similares, como 'feliz' y 'contento'.",
+      "datoDivertido": "😊 Usar sinónimos evita repetir la misma palabra. ¡Hace tu texto más bonito!"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el antónimo de 'alegre'?",
+      "opciones": [
+        "Contento",
+        "Feliz",
+        "Triste",
+        "Juguetón"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Triste' es el antónimo (opuesto) de 'alegre'.",
+      "datoDivertido": "😢😊 Los antónimos son como el día y la noche: ¡totalmente opuestos!"
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Cuál es un ejemplo de homónimos?",
+      "opciones": [
+        "Casa / hogar",
+        "Alto / bajo",
+        "Vino (bebida) / vino (verbo venir)",
+        "Rápido / veloz"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Vino' (bebida) y 'vino' (del verbo venir) suenan igual pero tienen diferente significado.",
+      "datoDivertido": "🍷 Los homónimos pueden causar confusiones divertidas. ¡Cuidado con ellos!"
+    },
+    {
+      "id": 7,
+      "tipo": "multiple",
+      "texto": "¿Qué significa la palabra 'pico' en 'pico de una montaña'?",
+      "opciones": [
+        "Boca de un ave",
+        "Herramienta para cavar",
+        "Cima o parte más alta",
+        "Cantidad pequeña"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Pico' es una palabra polisémica. En este caso significa la cima de una montaña.",
+      "datoDivertido": "🏔️ Una misma palabra puede tener varios significados. ¡El contexto te ayuda a entender cuál es!"
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "Las palabras 'obediente' y 'desobediente' son antónimos formados con el prefijo 'des-'.",
+      "correcta": true,
+      "explicacion": "✅ ¡Correcto! El prefijo 'des-' cambia el significado al opuesto.",
+      "datoDivertido": "🔄 Los prefijos antónimos son como interruptores: ¡encienden el significado contrario!"
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "'Barco' y 'bicicleta' pertenecen al mismo campo semántico porque comparten la misma raíz.",
+      "correcta": false,
+      "explicacion": "❌ Es falso. Pertenecen al campo semántico del transporte, pero NO comparten la misma raíz.",
+      "datoDivertido": "🚲 Los campos semánticos unen palabras por tema, no por raíz."
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "🔗 Une cada locución con su significado:",
+      "pares": [
+        {
+          "texto": "Estar en las nubes",
+          "coincide": "Estar distraído"
+        },
+        {
+          "texto": "Meter la pata",
+          "coincide": "Cometer un error"
+        },
+        {
+          "texto": "Ir al grano",
+          "coincide": "Hablar directamente del tema"
+        },
+        {
+          "texto": "Ponerse las pilas",
+          "coincide": "Prestar atención y esforzarse"
+        },
+        {
+          "texto": "Ser pan comido",
+          "coincide": "Ser muy fácil"
+        }
+      ],
+      "explicacion": "🎭 Las locuciones son expresiones cuyo significado no es literal, sino figurado.",
+      "datoDivertido": "💡 'Ponerse las pilas' no significa usar baterías, ¡sino activarse y concentrarse!"
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "📚 Une cada palabra con su sinónimo:",
+      "pares": [
+        {
+          "texto": "Comenzar",
+          "coincide": "Empezar"
+        },
+        {
+          "texto": "Grande",
+          "coincide": "Enorme"
+        },
+        {
+          "texto": "Bonito",
+          "coincide": "Hermoso"
+        },
+        {
+          "texto": "Rápido",
+          "coincide": "Veloz"
+        }
+      ],
+      "explicacion": "✅ Los sinónimos enriquecen el lenguaje y evitan repeticiones.",
+      "datoDivertido": "📖 Usar sinónimos hace que tus escritos sean más interesantes y variados."
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔄 Une cada palabra con su antónimo:",
+      "pares": [
+        {
+          "texto": "Día",
+          "coincide": "Noche"
+        },
+        {
+          "texto": "Caliente",
+          "coincide": "Frío"
+        },
+        {
+          "texto": "Subir",
+          "coincide": "Bajar"
+        },
+        {
+          "texto": "Ganar",
+          "coincide": "Perder"
+        }
+      ],
+      "explicacion": "⚖️ Los antónimos muestran contrastes y oposiciones.",
+      "datoDivertido": "🌞🌛 Los antónimos son como dos caras de una misma moneda."
+    }
+  ]
+}

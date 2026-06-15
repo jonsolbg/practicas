@@ -1,0 +1,190 @@
+{
+  "titulo": "⏰ Verbos: Presente, Pasado y Futuro",
+  "colorFondo": "#FFAB91",
+  "colorBoton": "#E64A19",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿En qué tiempo verbal está 'correré'?",
+      "opciones": [
+        "Pasado",
+        "Presente",
+        "Futuro",
+        "Pretérito"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Correré' está en futuro porque la acción aún no ha sucedido.",
+      "datoDivertido": "🔮 El futuro habla de lo que pasará mañana, la próxima semana o dentro de muchos años."
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el pasado del verbo 'cantar'?",
+      "opciones": [
+        "Cantará",
+        "Canta",
+        "Cantó",
+        "Cantando"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Cantó' es el pretérito (pasado) del verbo cantar.",
+      "datoDivertido": "🎤 Ayer canté, hoy canto, mañana cantaré. ¡Los verbos viajan en el tiempo!"
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Qué verbo está conjugado correctamente en futuro?",
+      "opciones": [
+        "Yo hicí",
+        "Él vendrá",
+        "Nosotros venimos",
+        "Tú viniste"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ 'Vendrá' es futuro del verbo 'venir' (irregular pero bien conjugado).",
+      "datoDivertido": "🚀 Los verbos en futuro suelen terminar en -é, -ás, -á, -emos, -án."
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el presente del verbo 'ir' para 'yo'?",
+      "opciones": [
+        "Fui",
+        "Voy",
+        "Iría",
+        "Iba"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ 'Voy' es la forma correcta del presente para 'yo ir'.",
+      "datoDivertido": "🚶 El verbo 'ir' es muy irregular. ¡Su presente es 'voy, vas, va, vamos, van'!"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Qué significa el verbo 'escribiré'?",
+      "opciones": [
+        "Escribí ayer",
+        "Escribo ahora",
+        "Escribiré mañana",
+        "He escrito antes"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Escribiré' indica una acción que sucederá en el futuro.",
+      "datoDivertido": "✍️ La terminación '-é' es como una máquina del tiempo hacia adelante."
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el pasado del verbo 'hacer'?",
+      "opciones": [
+        "Hará",
+        "Hace",
+        "Hizo",
+        "Haciendo"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Hizo' es el pretérito (pasado) de 'hacer' para él/ella.",
+      "datoDivertido": "🛠️ 'Hizo' es irregular: ¡no sigue el patrón normal de los verbos en -er!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "El verbo 'vivir' en pasado para 'yo' se dice 'viví'.",
+      "correcta": true,
+      "explicacion": "✅ Correcto. 'Viví' es el pretérito perfecto simple de 'vivir'.",
+      "datoDivertido": "🏠 'Viví' rima con 'feliz'. ¡Ayer viví un día muy feliz!"
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "Los verbos regulares cambian su raíz cuando se conjugan en futuro.",
+      "correcta": false,
+      "explicacion": "❌ Es falso. Los verbos REGULARES mantienen su raíz. Los IRREGULARES la cambian.",
+      "datoDivertido": "🦸 Los verbos regulares son predecibles. ¡Los irregulares son rebeldes!"
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "'Comeré' está en tiempo futuro.",
+      "correcta": true,
+      "explicacion": "✅ 'Comeré' indica una acción que sucederá después (futuro).",
+      "datoDivertido": "🍕 Mañana comeré pizza. ¡El futuro sabe delicioso!"
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "⏰ Une cada verbo con su conjugación en PASADO (ayer):",
+      "pares": [
+        {
+          "texto": "Cantar (yo)",
+          "coincide": "Canté"
+        },
+        {
+          "texto": "Comer (él)",
+          "coincide": "Comió"
+        },
+        {
+          "texto": "Vivir (nosotros)",
+          "coincide": "Vivimos"
+        },
+        {
+          "texto": "Jugar (tú)",
+          "coincide": "Jugaste"
+        }
+      ],
+      "explicacion": "📆 El pasado indica acciones que ya terminaron.",
+      "datoDivertido": "🕰️ Ayer terminó. ¡Pero los verbos nos ayudan a revivirlo!"
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "🚀 Une cada verbo con su conjugación en FUTURO (mañana):",
+      "pares": [
+        {
+          "texto": "Estudiar (yo)",
+          "coincide": "Estudiaré"
+        },
+        {
+          "texto": "Correr (él)",
+          "coincide": "Correrá"
+        },
+        {
+          "texto": "Salir (nosotros)",
+          "coincide": "Saldremos"
+        },
+        {
+          "texto": "Decir (tú)",
+          "coincide": "Dirás"
+        }
+      ],
+      "explicacion": "🔮 El futuro expresa acciones que todavía no ocurren.",
+      "datoDivertido": "🌟 'Saldremos' es irregular: ¡la raíz cambia de 'salir' a 'saldr-'!"
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔄 Une cada verbo irregular con su forma en presente (hoy):",
+      "pares": [
+        {
+          "texto": "Hacer (yo)",
+          "coincide": "Hago"
+        },
+        {
+          "texto": "Venir (tú)",
+          "coincide": "Vienes"
+        },
+        {
+          "texto": "Saber (él)",
+          "coincide": "Sabe"
+        },
+        {
+          "texto": "Poner (nosotros)",
+          "coincide": "Ponemos"
+        }
+      ],
+      "explicacion": "🎭 Los verbos irregulares cambian su raíz en algunos tiempos.",
+      "datoDivertido": "🦸‍♂️ 'Hago' no es 'haco' ni 'hazo'. ¡Los irregulares tienen personalidad propia!"
+    }
+  ]
+}

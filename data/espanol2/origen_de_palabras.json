@@ -1,0 +1,200 @@
+{
+  "titulo": "🔧 Morfología: La Fábrica de Palabras",
+  "colorFondo": "#A5D6A7",
+  "colorBoton": "#43A047",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Qué es una raíz en una palabra?",
+      "opciones": [
+        "La parte final de la palabra",
+        "La parte que indica género",
+        "La base que aporta el significado principal",
+        "La parte que solo sirve para pluralizar"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ La raíz es el núcleo de la palabra que contiene su significado esencial.",
+      "datoDivertido": "🌱 'Raíz' se llama así porque es como la raíz de un árbol: ¡de ella crecen todas las ramas!"
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Qué hace un prefijo?",
+      "opciones": [
+        "Se añade al final de la palabra",
+        "Se añade al inicio de la palabra",
+        "Se añade en medio de la palabra",
+        "Reemplaza la raíz completa"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ Los prefijos se colocan ANTES de la raíz para modificar su significado.",
+      "datoDivertido": "🚪 'Pre-' significa 'antes'. ¡Por eso los prefijos van 'antes' de la raíz!"
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Cuál de estos es un sufijo?",
+      "opciones": [
+        "re-",
+        "in-",
+        "pre-",
+        "-ero"
+      ],
+      "correcta": 3,
+      "explicacion": "✅ '-ero' es un sufijo porque se añade al FINAL de la palabra (ej: pan → panero).",
+      "datoDivertido": "🏠 Los sufijos pueden indicar profesión (-ero), lugar (-ería) o tamaño (-ito)."
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué significa la raíz 'aqua'?",
+      "opciones": [
+        "Fuego",
+        "Tierra",
+        "Agua",
+        "Aire"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Aqua' significa agua. Palabras como 'acuático' o 'acuario' vienen de esta raíz.",
+      "datoDivertido": "💧 'Aqua' es una raíz latina. ¡El español tiene muchas raíces del latín y el griego!"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el prefijo en la palabra 'rehacer'?",
+      "opciones": [
+        "-er",
+        "re-",
+        "hacer",
+        "-hacer"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ 'Re-' es el prefijo que significa 'volver a hacer'.",
+      "datoDivertido": "🔄 'Re-' es como un botón de 'repetición': ¡todo lo que toca se hace otra vez!"
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Qué palabra se forma con la raíz 'terra' y el sufijo '-oso'?",
+      "opciones": [
+        "Terrícola",
+        "Terreno",
+        "Terroso",
+        "Terremoto"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Terroso' significa 'lleno de tierra' (terra + -oso).",
+      "datoDivertido": "🌍 'Terra' significa Tierra en latín. ¡Por eso decimos 'terrestre'!"
+    },
+    {
+      "id": 7,
+      "tipo": "multiple",
+      "texto": "¿Qué significa el sufijo '-ito' en 'perrito'?",
+      "opciones": [
+        "Que es grande",
+        "Que es pequeño o tierno",
+        "Que es feo",
+        "Que está enojado"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ '-ito' es un sufijo diminutivo que indica tamaño pequeño o cariño.",
+      "datoDivertido": "🐶 En algunos países se usa '-ito' para todo: ¡abuelito, gatico, casita!"
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "La palabra 'injusto' se forma con el prefijo 'in-' que significa 'negación'.",
+      "correcta": true,
+      "explicacion": "✅ 'In-' es un prefijo de negación, como en 'incapaz' o 'incompleto'.",
+      "datoDivertido": "🚫 'In-' es primo de 'no'. ¡Convierte lo positivo en negativo!"
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "Los sufijos siempre cambian el género de la palabra original.",
+      "correcta": false,
+      "explicacion": "❌ No siempre. Algunos sufijos cambian el significado, pero no necesariamente el género.",
+      "datoDivertido": "🎭 Algunos sufijos indican acción (-ción), cualidad (-dad) o profesión (-ista)."
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "🔧 Une cada raíz con su significado:",
+      "pares": [
+        {
+          "texto": "bio-",
+          "coincide": "Vida"
+        },
+        {
+          "texto": "geo-",
+          "coincide": "Tierra"
+        },
+        {
+          "texto": "chrono-",
+          "coincide": "Tiempo"
+        },
+        {
+          "texto": "phon-",
+          "coincide": "Sonido"
+        },
+        {
+          "texto": "graph-",
+          "coincide": "Escritura"
+        }
+      ],
+      "explicacion": "📖 Muchas raíces vienen del griego y el latín. ¡Aprenderlas ayuda a entender muchas palabras!",
+      "datoDivertido": "📱 'Teléfono' une 'tele' (lejos) + 'phon' (sonido): ¡sonido que viene de lejos!"
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "🏷️ Une cada palabra con el afijo que la modifica:",
+      "pares": [
+        {
+          "texto": "predecir",
+          "coincide": "prefijo pre-"
+        },
+        {
+          "texto": "floristería",
+          "coincide": "sufijo -ería"
+        },
+        {
+          "texto": "submarino",
+          "coincide": "prefijo sub-"
+        },
+        {
+          "texto": "cantante",
+          "coincide": "sufijo -ante"
+        }
+      ],
+      "explicacion": "🔧 Los prefijos van al inicio, los sufijos al final. Ambos crean palabras nuevas.",
+      "datoDivertido": "🪄 Los afijos son como piezas de Lego: ¡puedes combinarlos para formar palabras nuevas!"
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔄 Une cada prefijo con su significado:",
+      "pares": [
+        {
+          "texto": "re-",
+          "coincide": "Volver a hacer"
+        },
+        {
+          "texto": "anti-",
+          "coincide": "En contra"
+        },
+        {
+          "texto": "super-",
+          "coincide": "Por encima"
+        },
+        {
+          "texto": "micro-",
+          "coincide": "Muy pequeño"
+        }
+      ],
+      "explicacion": "✨ Los prefijos añaden matices específicos al significado de la raíz.",
+      "datoDivertido": "🦸 'Super-' convierte cualquier palabra en algo más grande o poderoso: ¡superhéroe, supermercado!"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "titulo": "✍️ Ortografía: Reglas para Escribir Bien",
+  "colorFondo": "#90CAF9",
+  "colorBoton": "#1976D2",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Cómo se escribe correctamente la palabra?",
+      "opciones": [
+        "Uevo",
+        "Guevo",
+        "Huevo",
+        "Uebo"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Huevo' se escribe con H inicial porque empieza con el diptongo 'ue'.",
+      "datoDivertido": "🥚 ¡La H es muda pero muy importante! Sin ella, 'huevo' no existe."
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cuál de estas palabras se escribe con H?",
+      "opciones": [
+        "Iedra",
+        "Hiedra",
+        "Yedra",
+        "Giedra"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ 'Hiedra' se escribe con H por el diptongo 'ie' al inicio.",
+      "datoDivertido": "🌿 La hiedra es una planta trepadora. ¡Su nombre lleva H para recordar su sonido especial!"
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Dónde se usa mayúscula obligatoriamente?",
+      "opciones": [
+        "Después de una coma",
+        "Al inicio de un escrito y después de punto",
+        "En todas las palabras de una oración",
+        "Solo en nombres de animales"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ Se usa mayúscula al comenzar un texto y después de cada punto.",
+      "datoDivertido": "📝 ¡La primera letra de un texto siempre saluda con mayúscula!"
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué significa la abreviatura 'Sr.'?",
+      "opciones": [
+        "Señora",
+        "Señorita",
+        "Señor",
+        "Sirena"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Sr.' es la abreviatura de 'Señor'.",
+      "datoDivertido": "📨 Las abreviaturas ahorran espacio. ¡Siempre terminan con un punto!"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Cuál es la abreviatura de 'Página'?",
+      "opciones": [
+        "Pag",
+        "Pg.",
+        "Pág.",
+        "PA"
+      ],
+      "correcta": 2,
+      "explicacion": "✅ 'Pág.' es la abreviatura correcta de 'Página'.",
+      "datoDivertido": "📖 En los libros, 'pág.' te ayuda a encontrar rápido la página que buscas."
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Cómo se escribe correctamente?",
+      "opciones": [
+        "El principito",
+        "El Principito",
+        "el principito",
+        "el Principito"
+      ],
+      "correcta": 1,
+      "explicacion": "✅ Los títulos de libros se escriben con mayúscula inicial en palabras importantes.",
+      "datoDivertido": "📚 ¡Los títulos de libros son nombres propios y merecen mayúscula!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "La palabra 'hierro' se escribe con H porque empieza con el diptongo 'ie'.",
+      "correcta": true,
+      "explicacion": "✅ Correcto. 'Hierro', 'hielo' e 'hiedra' siguen la misma regla.",
+      "datoDivertido": "🔨 El hierro es un metal resistente... ¡y su nombre también es resistente a olvidar la H!"
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "Las siglas como 'MEP' se escriben con minúsculas porque son palabras comunes.",
+      "correcta": false,
+      "explicacion": "❌ Es falso. Las siglas se escriben con MAYÚSCULAS (MEP, CCSS, ONU).",
+      "datoDivertido": "🏛️ Las siglas son como iniciales de instituciones importantes. ¡Se escriben todas en mayúscula!"
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "Después de un punto y seguido se escribe con mayúscula.",
+      "correcta": true,
+      "explicacion": "✅ Correcto. El punto y seguido separa oraciones, y la siguiente palabra va con mayúscula.",
+      "datoDivertido": "🔴 El punto es como un semáforo en rojo: ¡después de él, todo empieza de nuevo con mayúscula!"
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "📝 Une cada palabra con su escritura correcta:",
+      "pares": [
+        {
+          "texto": "Bebida que pone las gallinas",
+          "coincide": "Huevo"
+        },
+        {
+          "texto": "Metal duro y pesado",
+          "coincide": "Hierro"
+        },
+        {
+          "texto": "Planta trepadora",
+          "coincide": "Hiedra"
+        },
+        {
+          "texto": "Agua congelada",
+          "coincide": "Hielo"
+        }
+      ],
+      "explicacion": "❄️ Todas estas palabras empiezan con diptongo y llevan H inicial.",
+      "datoDivertido": "🧊 'Hielo' sin H sería 'ielo'... ¡y no existe! La H es su guardiana."
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "🏷️ Une cada abreviatura con su significado completo:",
+      "pares": [
+        {
+          "texto": "Dra.",
+          "coincide": "Doctora"
+        },
+        {
+          "texto": "Ud.",
+          "coincide": "Usted"
+        },
+        {
+          "texto": "Atte.",
+          "coincide": "Atentamente"
+        },
+        {
+          "texto": "Km.",
+          "coincide": "Kilómetro"
+        }
+      ],
+      "explicacion": "📨 Las abreviaturas se usan para escribir de forma más rápida y corta.",
+      "datoDivertido": "🏃 'Km' es más corto que 'kilómetro'. ¡Las abreviaturas ahorran tiempo y espacio!"
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔠 Une cada ejemplo con la regla de mayúscula que corresponde:",
+      "pares": [
+        {
+          "texto": "Costa Rica",
+          "coincide": "Nombre de país"
+        },
+        {
+          "texto": "El Quijote",
+          "coincide": "Título de libro"
+        },
+        {
+          "texto": "Prof. Gómez",
+          "coincide": "Abreviatura de título"
+        },
+        {
+          "texto": "Dios",
+          "coincide": "Atributo divino"
+        }
+      ],
+      "explicacion": "👑 Las mayúsculas honran nombres propios, títulos y seres divinos.",
+      "datoDivertido": "🌟 Usar bien las mayúsculas muestra que eres un escritor cuidadoso y respetuoso."
+    }
+  ]
+}
