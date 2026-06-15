@@ -1,27 +1,84 @@
 <pre>
-Necesito un archivo JSON para un juego educativo interactivo de preguntas y respuestas. 
-El formato debe ser exactamente el siguiente:
+Necesito un archivo JSON para un juego educativo interactivo de preguntas y respuestas.
 
+El sistema soporta TRES tipos de preguntas:
+
+1. **Múltiple (tipo: "multiple")** - 4 opciones, una correcta
+2. **Verdadero/Falso (tipo: "vf")** - Afirmación que es verdadera o falsa
+3. **Asociación (tipo: "asociar")** - Unir elementos de dos columnas
+
+## Formato para cada tipo:
+
+### Tipo 1: Múltiple (es el que usabas antes, sigue igual)
 {
-  "tipo": "[Título llamativo con emoji]",
   "titulo": "[Título llamativo con emoji]",
-  "colorFondo": "[código hexadecimal color claro]",
-  "colorBoton": "[código hexadecimal color vibrante]",
+  "colorFondo": "#hexadecimal",
+  "colorBoton": "#hexadecimal",
   "preguntas": [
     {
       "id": 1,
-      "texto": "[Pregunta corta y clara, máximo 12 palabras]",
-      "opciones": ["[Opción A]", "[Opción B]", "[Opción C]"],
-      "correcta": [0, 1 o 2 según cuál sea la correcta],
-      "explicacion": "[Explicación de una línea, lenguaje positivo]",
-      "datoDivertido": "[Dato curioso con emoji, para motivar]"
+      "tipo": "multiple",
+      "texto": "[Pregunta corta, máximo 12 palabras]",
+      "opciones": ["Opción A", "Opción B", "Opción C", "Opción D"],
+      "correcta": 0,
+      "explicacion": "[Explicación positiva]",
+      "datoDivertido": "[Dato curioso con emoji]"
     }
   ]
 }
 
+### Tipo 2: Verdadero / Falso
+{
+  "titulo": "[Título con emoji]",
+  "colorFondo": "#hexadecimal",
+  "colorBoton": "#hexadecimal",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "vf",
+      "texto": "[Afirmación que es verdadera o falsa]",
+      "correcta": true,
+      "explicacion": "[Explicación de por qué es verdadero o falso]",
+      "datoDivertido": "[Dato curioso]"
+    }
+  ]
+}
 
-Estilo: preguntas muy cortas, lenguaje divertido, usar emojis.
+### Tipo 3: Asociación / Relacionar
+{
+  "titulo": "[Título con emoji]",
+  "colorFondo": "#hexadecimal",
+  "colorBoton": "#hexadecimal",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "asociar",
+      "texto": "[Indicación de lo que hay que asociar]",
+      "pares": [
+        {"texto": "Elemento 1", "coincide": "Su pareja 1"},
+        {"texto": "Elemento 2", "coincide": "Su pareja 2"},
+        {"texto": "Elemento 3", "coincide": "Su pareja 3"}
+      ],
+      "explicacion": "[Explicación del tema]",
+      "datoDivertido": "[Dato curioso]"
+    }
+  ]
+}
 
+## Reglas importantes:
+- Si no se especifica "tipo" en una pregunta, asume que es "multiple" (retrocompatible)
+- Las preguntas de asociación deben tener entre 3 y 5 pares
+- Usa emojis para hacerlo divertido
+- No des pistas de la respuesta correcta en el texto de la pregunta ni tampoco usando emojis.
+- Explicaciones cortas y positivas
+- Colores vivos, hagámoslo atractivo para niños
+- Mezcla los 3 tipos de preguntas en el mismo archivo para variedad pero agrupando, primero algunas de múltiple, luego verdadero/falso y finalmente asociación.
+
+## Tema del JSON:
+[TEMA AQUÍ]
+
+## Cantidad de preguntas:
+[NÚMERO, máximo 10]
 /*opcional*/ Cantidad de preguntas: [número, ej: 6]
 
 --------------------------------------------
