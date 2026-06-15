@@ -11,6 +11,35 @@ let preguntaActual = null;
 // Cargar configuración de racha
 let configRacha = typeof temaData.racha !== 'undefined' ? temaData.racha : null;
 
+
+// ============================================
+// SONIDOS
+// ============================================
+let sonidosActivados = false;
+let volumenSonidos = 0.7;
+
+// Cargar configuración de sonidos (desde config.json pasada por PHP)
+function cargarConfigSonidos() {
+    if (typeof configSonidos !== 'undefined' && configSonidos) {
+        sonidosActivados = configSonidos.activo === true;
+        volumenSonidos = configSonidos.volumen || 0.7;
+    }
+}
+
+function reproducirSonido(id) {
+    if (!sonidosActivados) return;
+    
+    let audio = document.getElementById(id);
+    if (audio) {
+        audio.volume = volumenSonidos;
+        audio.currentTime = 0;  // Reiniciar por si ya estaba sonando
+        audio.play().catch(e => console.log('Error reproduciendo sonido:', e));
+    }
+}
+
+// Llamar al inicio
+cargarConfigSonidos();
+
 // ============================================
 // ACTUALIZAR ESTRELLAS Y RACHA
 // ============================================
@@ -62,6 +91,8 @@ function getNivelRacha() {
 function mostrarAnimacionRacha() {
     let nivel = getNivelRacha();
     if (!nivel) return;
+
+    reproducirSonido('sonidoRacha');  // ← AGREGAR ESTA LÍNEA
     
     let animDiv = document.createElement("div");
     animDiv.className = "animacion-racha";
@@ -270,6 +301,7 @@ function responder(opcElegida) {
     if (esCorrecta) {
         aciertos++;
         aciertosSeguidos++;
+        reproducirSonido('sonidoCorrecto');  // ← AGREGAR ESTA LÍNEA
         actualizarEstrellas();
         feedbackHtml = `<span style="color:green; font-size:2rem;">✅ ¡Correcto!</span><br>${preguntaActual.explicacion}`;
         
@@ -289,6 +321,7 @@ function responder(opcElegida) {
         }
     } else {
         let correctaTexto = preguntaActual.opciones[preguntaActual.correcta];
+        reproducirSonido('sonidoIncorrecto');  // ← AGREGAR ESTA LÍNEA
         feedbackHtml = `<span style="color:red; font-size:2rem;">❌ Casi...</span><br>La respuesta correcta es: <strong>${correctaTexto}</strong><br>${preguntaActual.explicacion}`;
         
         if (configRacha && configRacha.resetearAlFallar && aciertosSeguidos > 0) {

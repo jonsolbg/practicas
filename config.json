@@ -51,5 +51,10 @@
         "animacion": "confeti"
       }
     ]
+  },
+
+  "sonidos": {
+    "activo": true,
+    "volumen": 0.7
   }
 }

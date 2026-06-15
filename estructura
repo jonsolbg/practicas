@@ -1,5 +1,10 @@
 practicas/
 │
+├── assets/
+│   └── sounds/
+│       ├── correcto.mp3    ← TÚ AGREGA ESTOS ARCHIVOS
+│       ├── incorrecto.mp3
+│       └── racha.mp3
 ├── index.php
 ├── practica.php
 ├── guardar_progreso.php

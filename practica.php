@@ -204,6 +204,17 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
 </head>
 <body>
 
+<!-- Reproductores de sonido (ocultos) -->
+<audio id="sonidoCorrecto" preload="auto" style="display:none;">
+    <source src="assets/sounds/correcto.wav" type="audio/wav">
+</audio>
+<audio id="sonidoIncorrecto" preload="auto" style="display:none;">
+    <source src="assets/sounds/incorrecto.mp3" type="audio/mpeg">
+</audio>
+<audio id="sonidoRacha" preload="auto" style="display:none;">
+    <source src="assets/sounds/racha.wav" type="audio/wav">
+</audio>
+
 <div class="contenedor-pregunta" id="preguntaContenedor">
     <div class="pregunta-texto" id="preguntaTexto">Cargando...</div>
     <div class="opciones" id="opcionesDiv"></div>
@@ -213,6 +224,7 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     <button id="btnReiniciar" class="btn-reiniciar" style="display:none;">🔄 Reiniciar</button>
 </div>
 
+
 <div class="personaje-guia ocultar-movil" id="personajeGuia">
     <div class="avatar">🧠🐝</div>
     <div id="mensaje-personaje">¡Hola! Lee con atención.</div>
@@ -221,6 +233,17 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
 <script>
     // Pasamos los datos del tema a JavaScript
     var temaData = <?php echo json_encode($data); ?>;
+
+    // Configuración de sonidos desde config.json
+    var configSonidos = <?php 
+        $configGlobal = array();
+        if (file_exists("config.json")) {
+            $configJson = file_get_contents("config.json");
+            $configGlobal = json_decode($configJson, true);
+        }
+        $sonidosConfig = isset($configGlobal['sonidos']) ? $configGlobal['sonidos'] : array('activo' => false);
+        echo json_encode($sonidosConfig);
+    ?>;
     
     // Si no hay configuración de racha en el JSON del tema, usar la global
     if (typeof temaData.racha === 'undefined') {
