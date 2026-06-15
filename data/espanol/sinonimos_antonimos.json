@@ -1,0 +1,63 @@
+{
+  "titulo": "🔄 Sinónimos y Antónimos: ¡Iguales o contrarios!",
+  "colorFondo": "#E8EAF6",
+  "colorBoton": "#3F51B5",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué es un sinónimo?",
+      "opciones": ["Palabra que suena igual", "Palabra con significado parecido", "Palabra opuesta"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Sinónimos son como amigos que significan casi lo mismo.",
+      "datoDivertido": "😊 'Contento', 'feliz' y 'alegre'… ¡todos son sinónimos de emoción positiva! 🎈"
+    },
+    {
+      "id": 2,
+      "texto": "¿Antónimo de 'tímido'?",
+      "opciones": ["Vergonzoso", "Callado", "Atrevido"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! Atrevido es todo lo contrario de tímido.",
+      "datoDivertido": "🎭 El antónimo de 'temprano' es 'tarde'. ¡Dos caras de la misma moneda! ⏳"
+    },
+    {
+      "id": 3,
+      "texto": "Sinónimo de 'enorme'",
+      "opciones": ["Pequeño", "Gigante", "Común"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Enorme y gigante significan muy grande.",
+      "datoDivertido": "🐳 Una ballena es ENORME… ¡también es GIGANTE! 🐋"
+    },
+    {
+      "id": 4,
+      "texto": "Antónimo de 'alegre'",
+      "opciones": ["Feliz", "Contento", "Triste"],
+      "correcta": 2,
+      "explicacion": "¡Exacto! Lo contrario de alegre es triste.",
+      "datoDivertido": "🌈 Si estás triste, busca un sinónimo de alegría: ¡una sonrisa! 😊"
+    },
+    {
+      "id": 5,
+      "texto": "¿Cómo se forma un antónimo con prefijo?",
+      "opciones": ["Agregando 're'", "Agregando 'des-'", "Agregando 'ito'"],
+      "correcta": 1,
+      "explicacion": "¡Sí! 'Des-' cambia el significado al opuesto.",
+      "datoDivertido": "🔁 'Obediente' → 'desobediente'. ¡Un prefijo lo cambia todo! ⚡"
+    },
+    {
+      "id": 6,
+      "texto": "¿Cuál es antónimo de 'obediente'?",
+      "opciones": ["Respetuoso", "Desobediente", "Amable"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Usando el prefijo 'des-' obtenemos el contrario.",
+      "datoDivertido": "👂 Obediente escucha; desobediente… ¡hace lo que quiere! 🎧"
+    },
+    {
+      "id": 7,
+      "texto": "Sinónimo de 'rápido'",
+      "opciones": ["Lento", "Veloz", "Tranquilo"],
+      "correcta": 1,
+      "explicacion": "¡Así es! Rápido y veloz significan casi lo mismo.",
+      "datoDivertido": "🐆 El guepardo es RÁPIDO y VELOZ… ¡sinónimo de velocidad! 💨"
+    }
+  ]
+}

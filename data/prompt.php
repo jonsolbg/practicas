@@ -18,8 +18,10 @@ El formato debe ser exactamente el siguiente:
   ]
 }
 
-/*opcional*/ Cantidad de preguntas: [número, ej: 6]
+
 Estilo: preguntas muy cortas, lenguaje divertido, usar emojis.
+
+/*opcional*/ Cantidad de preguntas: [número, ej: 6]
 
 --------------------------------------------
 

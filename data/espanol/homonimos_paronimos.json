@@ -1,0 +1,87 @@
+{
+  "titulo": "🎯 Homónimos, Parónimos y Polisémicas",
+  "colorFondo": "#F3E5F5",
+  "colorBoton": "#9C27B0",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué son los homónimos?",
+      "opciones": ["Se escriben igual", "Se pronuncian igual, significado diferente", "Se parecen un poco"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Suenan igual pero significan cosas distintas.",
+      "datoDivertido": "🐚 'Ola' del mar y 'hola' de saludar… ¡suenan igual! 👋"
+    },
+    {
+      "id": 2,
+      "texto": "Ejemplo de homónimos: 'cazar' y…",
+      "opciones": ["Correr", "Casar", "Saltar"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Suenan igual pero uno es atrapar y otro es matrimonio.",
+      "datoDivertido": "🔫 Cazar animales VS 👰 Casar novios. ¡Suenan igual pero no es lo mismo!"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué son los parónimos?",
+      "opciones": ["Se escriben igual", "Se parecen mucho pero significan diferente", "Son opuestos"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Se parecen como primos, pero no son iguales.",
+      "datoDivertido": "🦌 'Venado' y 'vendado'… ¡cuidado con confundirlos o te vendan al venado! 🩹"
+    },
+    {
+      "id": 4,
+      "texto": "¿Cuál es un ejemplo de palabra polisémica?",
+      "opciones": ["Banco (sentarse o dinero)", "Casa", "Perro"],
+      "correcta": 0,
+      "explicacion": "¡Sí! 'Banco' tiene varios significados.",
+      "datoDivertido": "📖 Las polisémicas tienen muchos significados… ¡como navaja suiza! 🛠️"
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué significa 'pico' como palabra polisémica?",
+      "opciones": ["Boca de ave o cima de montaña", "Solo un número", "Un color"],
+      "correcta": 0,
+      "explicacion": "¡Polisémica! Pico de ave o cima de montaña.",
+      "datoDivertido": "⛰️ El pico más alto es el Everest… ¡y los pájaros también tienen pico! 🦜"
+    },
+    {
+      "id": 6,
+      "texto": "¿Qué significa 'hoja' como palabra polisémica?",
+      "opciones": ["Parte de planta o papel", "Una puerta", "Un animal"],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Hoja de árbol o hoja de papel.",
+      "datoDivertido": "🍃 En otoño caen las hojas… ¡y en mi cuaderno también! 📝"
+    },
+    {
+      "id": 7,
+      "texto": "¿Qué significa 'tronco' como palabra polisémica?",
+      "opciones": ["Tallo de árbol o parte del cuerpo", "Un río", "Una casa"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Tronco de árbol o tronco del cuerpo.",
+      "datoDivertido": "🌳 El tronco del árbol es duro… ¡como el tuyo que sostiene tu cabeza! 🧠"
+    },
+    {
+      "id": 8,
+      "texto": "¿Cuál par es de PARÓNIMOS?",
+      "opciones": ["Ola/Hola", "Venado/Vendado", "Banco/Banco"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Suenan parecido pero significan diferente.",
+      "datoDivertido": "🔊 'Afectar' y 'efectar'… ¡casi gemelos pero no! 🧬"
+    },
+    {
+      "id": 9,
+      "texto": "Homónimo de 'votar'",
+      "opciones": ["Botar (tirar)", "Comer", "Saltar"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Votar (elegir) y botar (tirar) suenan igual.",
+      "datoDivertido": "📦 No es lo mismo VOTAR por un presidente que BOTAR la basura 🗑️"
+    },
+    {
+      "id": 10,
+      "texto": "¿Cuál NO es polisémica?",
+      "opciones": ["Banco", "Pico", "Computadora"],
+      "correcta": 2,
+      "explicacion": "¡Computadora tiene un solo significado principal!",
+      "datoDivertido": "🖥️ 'Computadora' no juega a tener muchos sentidos… ¡es más directa! 🎯"
+    }
+  ]
+}

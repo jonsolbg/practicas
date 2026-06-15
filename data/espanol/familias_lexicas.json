@@ -1,0 +1,47 @@
+{
+  "titulo": "📚 Familias Léxicas: ¡Palabras con el mismo apellido!",
+  "colorFondo": "#FFF3E0",
+  "colorBoton": "#FF9800",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué comparten las palabras de una familia léxica?",
+      "opciones": ["El mismo tema", "La misma raíz", "El mismo sonido"],
+      "correcta": 1,
+      "explicacion": "¡Así es! Comparten la misma raíz, como miembros de una familia comparten apellido.",
+      "datoDivertido": "🧠 'Flor', 'florero' y 'florecer' son familia. ¡Todas tienen 'flor' adentro! 🌸"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál es la raíz de 'panadería'?",
+      "opciones": ["pan", "dería", "adero"],
+      "correcta": 0,
+      "explicacion": "¡Correcto! 'Pan' es la raíz, el corazón de la palabra.",
+      "datoDivertido": "🍞 Panadero, panecillo y empanada… ¡todos nacen del 'pan'! 🥐"
+    },
+    {
+      "id": 3,
+      "texto": "¿Cuál palabra NO pertenece a la familia de 'mar'?",
+      "opciones": ["Marino", "Marea", "Montaña"],
+      "correcta": 2,
+      "explicacion": "¡Montaña no tiene nada que ver con el mar!",
+      "datoDivertido": "🌊 'Mar', 'marejada', 'marítimo'… ¡todos llevan 'mar' adentro! 🐟"
+    },
+    {
+      "id": 4,
+      "texto": "¿Qué es la raíz de una palabra?",
+      "opciones": ["La parte final", "La parte que da el significado base", "Un adorno"],
+      "correcta": 1,
+      "explicacion": "¡Sí! La raíz es el núcleo, lo que no cambia.",
+      "datoDivertido": "🌳 La raíz es como el tronco del árbol palabra. ¡De ahí salen todas las ramas! 🍃"
+    },
+    {
+      "id": 5,
+      "texto": "Selecciona la familia léxica de 'luz'",
+      "opciones": ["Sol, luna, estrella", "Luminoso, alumbrar, lucero", "Brillante, oscuro, claro"],
+      "correcta": 1,
+      "explicacion": "¡Todas tienen 'luc' o 'lum' que viene de luz!",
+      "datoDivertido": "🔦 'Luz' brilla en 'lucero', 'luminoso' y hasta en 'luciérnaga' ✨"
+    }
+  ]
+}

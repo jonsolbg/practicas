@@ -1,0 +1,71 @@
+{
+  "titulo": "🔧 Prefijos y Sufijos: ¡Modifica la palabra!",
+  "colorFondo": "#E3F2FD",
+  "colorBoton": "#2196F3",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué hace un prefijo?",
+      "opciones": ["Va al final", "Va al inicio", "Cambia la raíz"],
+      "correcta": 1,
+      "explicacion": "¡Sí! El prefijo se coloca AL PRINCIPIO.",
+      "datoDivertido": "🎭 'Prehistoria' = antes de la historia. ¡El prefijo 'pre' viaja en el tiempo! ⏰"
+    },
+    {
+      "id": 2,
+      "texto": "En 'casita', ¿qué es '-ita'?",
+      "opciones": ["Prefijo", "Raíz", "Sufijo"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! '-ita' es un sufijo cariñoso.",
+      "datoDivertido": "🏠 Casa → casita, perro → perrito. ¡Los sufijos hacen todo más tierno! 🐶"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué significa el prefijo 're-'?",
+      "opciones": ["Hacer otra vez", "Antes de", "Muy grande"],
+      "correcta": 0,
+      "explicacion": "¡Así es! 'Rehacer' = hacer otra vez.",
+      "datoDivertido": "🔄 Reescribir, recargar, repasar… ¡todo otra vez gracias a 're'! ♻️"
+    },
+    {
+      "id": 4,
+      "texto": "En 'inhumano', ¿qué significa el prefijo 'in-'?",
+      "opciones": ["Muy humano", "Negación o contrario", "Parecido a"],
+      "correcta": 1,
+      "explicacion": "¡Sí! 'In-' da sentido contrario: no humano.",
+      "datoDivertido": "⚡ 'Inútil', 'invisible', 'increíble'… ¡el prefijo 'in' niega todo! 🚫"
+    },
+    {
+      "id": 5,
+      "texto": "¿Cuál palabra tiene SUFIJO?",
+      "opciones": ["Rehacer", "Panadero", "Prehistoria"],
+      "correcta": 1,
+      "explicacion": "¡'Panadero' termina en '-ero', un sufijo que indica oficio!",
+      "datoDivertido": "🧑‍🍳 'Carpintero', 'albañil', 'panadero'… ¡los sufijos dicen a qué te dedicas!"
+    },
+    {
+      "id": 6,
+      "texto": "¿Qué hace el sufijo '-ito' o '-ita'?",
+      "opciones": ["Hace más grande", "Indica cariño o tamaño pequeño", "Indica profesión"],
+      "correcta": 1,
+      "explicacion": "¡Sí! 'Gatito' es un gato pequeño y adorable.",
+      "datoDivertido": "🐭 'Ratoncito', 'abuelita'… ¡puro amor en forma de sufijo! 💕"
+    },
+    {
+      "id": 7,
+      "texto": "¿Cuál prefijo significa 'antes de'?",
+      "opciones": ["re-", "pre-", "des-"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! 'Pre' significa antes: preescolar, prehistoria.",
+      "datoDivertido": "🏫 Antes de la escuela vas al PREescolar. ¡Qué bien suena! 🎒"
+    },
+    {
+      "id": 8,
+      "texto": "¿Qué palabra tiene prefijo y sufijo a la vez?",
+      "opciones": ["Desordenadamente", "Casa", "Flor"],
+      "correcta": 0,
+      "explicacion": "¡Sí! 'Des-' (prefijo) + 'orden' + '-mente' (sufijo).",
+      "datoDivertido": "🧩 Es como un sándwich de letras: prefijo + raíz + sufijo. ¡Ñam! 🥪"
+    }
+  ]
+}

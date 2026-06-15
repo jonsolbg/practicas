@@ -1,31 +1,53 @@
 <?php
+// ============================================
+// CARGAR TEMA Y CONFIGURACIÓN
+// ============================================
 $tema = isset($_GET['tema']) ? $_GET['tema'] : '';
 $archivo_json = "data/{$tema}.json";
+
 if (!file_exists($archivo_json)) {
     die("❌ Práctica no encontrada. <a href='index.php'>Volver al menú</a>");
 }
+
 $json_content = file_get_contents($archivo_json);
 $data = json_decode($json_content, true);
 if (!$data) {
     die("❌ Error en el archivo de preguntas.");
 }
 
-$colorFondo = isset($data['colorFondo']) ? $data['colorFondo'] : '#f0f4c3';
-$colorBoton = isset($data['colorBoton']) ? $data['colorBoton'] : '#ffb74d';
-$titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
+// Cargar configuración global (para racha, colores, etc.)
+$configGlobal = array();
+if (file_exists("config.json")) {
+    $configJson = file_get_contents("config.json");
+    $configGlobal = json_decode($configJson, true);
+}
+
+// Colores del tema (con fallback)
+$colorFondo = isset($data['colorFondo']) ? $data['colorFondo'] : (isset($configGlobal['colorFondoPorDefecto']) ? $configGlobal['colorFondoPorDefecto'] : '#f0f4c3');
+$colorBoton = isset($data['colorBoton']) ? $data['colorBoton'] : (isset($configGlobal['colorBotonPorDefecto']) ? $configGlobal['colorBotonPorDefecto'] : '#ffb74d');
+$titulo = isset($data['titulo']) ? $data['titulo'] : ucfirst(str_replace('_', ' ', basename($tema)));
+
+// Configuración de racha (prioriza la del tema, luego la global)
+$rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['racha']) ? $configGlobal['racha'] : array('activo' => false));
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title><?php echo htmlspecialchars($titulo); ?> 🎯</title>
     <link rel="stylesheet" href="css/estilo.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background: <?php echo $colorFondo; ?>;
-            font-family: 'Comic Neue', 'Segoe UI', cursive;
+            font-family: 'Comic Neue', 'Segoe UI', 'Comic Neue', 'Chalkboard SE', cursive;
             text-align: center;
             padding: 20px;
+            margin: 0;
+            min-height: 100vh;
         }
         .contenedor-pregunta {
             background: white;
@@ -41,6 +63,7 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             font-weight: bold;
             margin-bottom: 30px;
             color: #1e3c72;
+            line-height: 1.3;
         }
         .opciones {
             display: flex;
@@ -65,6 +88,9 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             background: <?php echo $colorBoton; ?>;
             filter: brightness(0.95);
         }
+        .opcion:active {
+            transform: scale(0.98);
+        }
         .feedback {
             font-size: 1.4rem;
             margin: 20px;
@@ -84,6 +110,14 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             letter-spacing: 10px;
             margin: 20px;
         }
+        .indicador-racha {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 30px;
+            display: inline-block;
+        }
         .btn-siguiente {
             background: #4caf50;
             color: white;
@@ -93,9 +127,11 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             border: none;
             cursor: pointer;
             margin-top: 20px;
+            transition: 0.2s;
         }
         .btn-siguiente:hover {
             background: #45a049;
+            transform: scale(1.02);
         }
         .personaje-guia {
             position: fixed;
@@ -111,6 +147,7 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             display: flex;
             align-items: center;
             gap: 10px;
+            z-index: 100;
         }
         .avatar {
             font-size: 3rem;
@@ -128,9 +165,25 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             font-size: 1.2rem;
             cursor: pointer;
             margin-bottom: 15px;
+            transition: 0.2s;
         }
         .btn-voz:hover {
             background: #ff8f00;
+            transform: scale(1.02);
+        }
+        .btn-reiniciar {
+            background: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .btn-reiniciar:hover {
+            background: #1976d2;
         }
         @media (max-width: 600px) {
             .pregunta-texto { font-size: 1.5rem !important; }
@@ -138,6 +191,7 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
             .btn-siguiente, .btn-voz { font-size: 1.3rem !important; }
             .personaje-guia { font-size: 0.9rem !important; max-width: 180px; }
             .avatar { font-size: 2rem !important; }
+            .estrellas { font-size: 1.8rem; letter-spacing: 5px; }
         }
     </style>
 </head>
@@ -149,6 +203,7 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
     <div class="estrellas" id="estrellasDiv">☆☆☆☆☆</div>
     <div id="feedbackDiv" class="feedback"></div>
     <button id="btnSiguiente" class="btn-siguiente" style="display:none;">➡️ Siguiente pregunta</button>
+    <button id="btnReiniciar" class="btn-reiniciar" style="display:none;">🔄 Reiniciar</button>
 </div>
 
 <div class="personaje-guia" id="personajeGuia">
@@ -159,9 +214,24 @@ $titulo = isset($data['titulo']) ? $data['titulo'] : $tema;
 <script>
     // Pasamos los datos del tema a JavaScript
     var temaData = <?php echo json_encode($data); ?>;
+    
+    // Si no hay configuración de racha en el JSON del tema, usar la global
+    if (typeof temaData.racha === 'undefined') {
+        temaData.racha = <?php echo json_encode($rachaConfig); ?>;
+    }
+    
+    // Guardar el nombre del tema para reiniciar
+    var temaActual = "<?php echo htmlspecialchars($tema); ?>";
 </script>
 <script src="js/script.js"></script>
 <script src="js/personaje.js"></script>
 <script src="js/voz.js"></script>
+
+<script>
+    // Botón de reinicio (recarga la misma página)
+    document.getElementById("btnReiniciar").addEventListener("click", function() {
+        window.location.href = "practica.php?tema=" + encodeURIComponent(temaActual);
+    });
+</script>
 </body>
 </html>

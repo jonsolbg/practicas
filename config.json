@@ -1,0 +1,55 @@
+{
+  "ordenCategorias": [
+    "espanol",
+    "ciencias"
+  ],
+  "nombresBonitos": {
+    "ciencias": "🔬 Ciencias Naturales",
+    "espanol": "📚 Lenguaje y Español",
+    "matematicas": "🧮 Matemáticas",
+    "historia": "📜 Historia",
+    "geografia": "🌎 Geografía",
+    "ingles": "🇺🇸 Inglés",
+    "arte": "🎨 Arte y Música"
+  },
+  "temasOcultos": [],
+  "mostrarCategoriasVacias": false,
+  "colorFondoGeneral": "#1e3c72",
+  "colorFondoGradiente": "#2b4c7c",
+
+
+  "racha": {
+    "activo": true,
+    "resetearAlFallar": false,
+    "niveles": [
+      {
+        "aciertos": 3,
+        "mensaje": "🔥 ¡Vas en racha! Sigue así",
+        "emoji": "🔥",
+        "color": "#ff9800",
+        "animacion": "flameante"
+      },
+      {
+        "aciertos": 5,
+        "mensaje": "⚡ ¡Imparable! Eres una máquina",
+        "emoji": "⚡",
+        "color": "#ff5722",
+        "animacion": "explosion"
+      },
+      {
+        "aciertos": 7,
+        "mensaje": "🌟 ¡SUPER RACHA! Eres un campeón",
+        "emoji": "🌟",
+        "color": "#ffeb3b",
+        "animacion": "estrellas"
+      },
+      {
+        "aciertos": 10,
+        "mensaje": "🏆 ¡LEYENDA! 10 aciertos seguidos",
+        "emoji": "🏆",
+        "color": "#ffd700",
+        "animacion": "confeti"
+      }
+    ]
+  }
+}

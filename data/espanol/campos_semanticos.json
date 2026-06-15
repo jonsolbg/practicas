@@ -1,0 +1,47 @@
+{
+  "titulo": "🗂️ Campos Semánticos: ¡Amigos por tema!",
+  "colorFondo": "#E8F5E9",
+  "colorBoton": "#4CAF50",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué une a las palabras de un campo semántico?",
+      "opciones": ["La misma raíz", "El mismo significado exacto", "El mismo tema o idea"],
+      "correcta": 2,
+      "explicacion": "¡Exacto! Son palabras que trabajan juntas por un tema común.",
+      "datoDivertido": "🚗 Avión, tren y barco son del campo semántico 'transporte'. ¡Cada uno viaja diferente! ✈️"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál NO pertenece al campo semántico de 'tecnología'?",
+      "opciones": ["Computadora 💻", "Tablet 📱", "Manzana 🍎"],
+      "correcta": 2,
+      "explicacion": "¡La manzana se come, no se enchufa! 😄",
+      "datoDivertido": "📡 Teléfono, audífonos y parlantes… ¡pura tecnología para tus oídos! 🎧"
+    },
+    {
+      "id": 3,
+      "texto": "Campo semántico de 'deportes': ¿cuál sobra?",
+      "opciones": ["Fútbol ⚽", "Voleibol 🏐", "Cocina 🍳"],
+      "correcta": 2,
+      "explicacion": "¡Cocinar no es un deporte… aunque queme calorías!",
+      "datoDivertido": "🏅 Béisbol, tenis y fútbol… ¡todos te hacen sudar la camiseta! 💦"
+    },
+    {
+      "id": 4,
+      "texto": "¿Cuál es un ejemplo de campo semántico?",
+      "opciones": ["Flor, florero, florecer", "Avión, barco, bicicleta", "Pan, panadero, panadería"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Todos son medios de transporte. ¡Mismo tema!",
+      "datoDivertido": "🚢 Un barco navega, un avión vuela… pero los dos te llevan lejos 🌎"
+    },
+    {
+      "id": 5,
+      "texto": "¿Cómo se llama el grupo de palabras relacionadas por un tema común?",
+      "opciones": ["Familia léxica", "Campo semántico", "Conjugación"],
+      "correcta": 1,
+      "explicacion": "¡Correcto! El campo semántico junta palabras por su tema.",
+      "datoDivertido": "🧸 'Muñeca', 'tren', 'pelota'… ¡campo semántico de juguetes! 🎲"
+    }
+  ]
+}

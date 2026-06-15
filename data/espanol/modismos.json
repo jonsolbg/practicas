@@ -1,0 +1,71 @@
+{
+  "titulo": "🎭 Modismos: ¡No te lo tomes literal!",
+  "colorFondo": "#FFF3E0",
+  "colorBoton": "#FF5722",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué significa 'dar en el clavo'?",
+      "opciones": ["Golpear un clavo", "Acertar o hacer algo bien", "Clavar sin querer"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Significa que acertaste completamente.",
+      "datoDivertido": "🏆 Cuando sacas 10 en un examen… ¡DISTE EN EL CLAVO! 🎉"
+    },
+    {
+      "id": 2,
+      "texto": "'Es pan comido' significa que algo es…",
+      "opciones": ["Muy difícil", "Muy fácil", "Delicioso"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Es tan fácil como comerse un pan.",
+      "datoDivertido": "🍰 Si la tarea es pan comido… ¡a celebrar con una galleta! 🍪"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué significa 'meter la pata'?",
+      "opciones": ["Cometer un error", "Patear algo", "Entrar a un lugar"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Meter la pata es equivocarse.",
+      "datoDivertido": "🦶 Si metes la pata… ¡no te enojes! Todos nos equivocamos 😅"
+    },
+    {
+      "id": 4,
+      "texto": "'Tirar la toalla' significa…",
+      "opciones": ["Sudar mucho", "Rendirse o abandonar", "Limpiarse"],
+      "correcta": 1,
+      "explicacion": "¡Así es! Como un boxeador que se rinde.",
+      "datoDivertido": "🥊 ¡Nunca tires la toalla! Sigue intentándolo 💪"
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué significa 'estar en las nubes'?",
+      "opciones": ["Volar", "Distraído o pensando en otra cosa", "Feliz"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Es cuando tu mente anda por las nubes.",
+      "datoDivertido": "☁️ ¡Baja de las nubes! La maestra te está hablando 📚"
+    },
+    {
+      "id": 6,
+      "texto": "'Andar con pies de plomo' significa…",
+      "opciones": ["Ser muy pesado", "Actuar con mucho cuidado", "Caminar lento"],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Tener cuidado para no equivocarse.",
+      "datoDivertido": "🐘 Como un elefante pisando huevos… ¡con mucho cuidado! 🥚"
+    },
+    {
+      "id": 7,
+      "texto": "'Romper el hielo' significa…",
+      "opciones": ["Tener frío", "Iniciar una conversación o ambiente", "Pelearse"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Es hacer que la gente se sienta cómoda al empezar.",
+      "datoDivertido": "🧊 En una fiesta nueva… ¡rompe el hielo contando un chiste! 😄"
+    },
+    {
+      "id": 8,
+      "texto": "'No tener pelos en la lengua' significa…",
+      "opciones": ["Ser mudo", "Hablar sin rodeos, directo", "Tener la lengua peluda"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Decir las cosas claras sin miedo.",
+      "datoDivertido": "🎤 La abuela que dice lo que piensa… ¡no tiene pelos en la lengua! 👵"
+    }
+  ]
+}

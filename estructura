@@ -2,15 +2,36 @@ practicas/
 │
 ├── index.php
 ├── practica.php
+├── config.json
 ├── css/
-│   └── estilo.css
 ├── js/
-│   ├── script.js          # Lógica principal (cargar preguntas, responder, siguiente)
-│   ├── personaje.js       # Mensajes y animación del personaje guía
-│   └── voz.js             # Lectura en voz alta (opcional)
 ├── data/
-│   ├── renal.json
-│   ├── vertebrados.json
-│   └── reinos.json
-└── assets/
-    └── (imágenes opcionales)
+│   ├── ciencias/           # ← carpeta para temas de ciencias
+│   │   ├── renal.json
+│   │   ├── vertebrados.json
+│   │   ├── reinos.json
+│   │   ├── fungi.json
+│   │   ├── experimentacion_animal.json
+│   │   └── ciencia_tecnologia_medicina.json
+│   │
+│   ├── lenguaje/           # ← carpeta para temas de español/lenguaje
+│   │   ├── sinonimos.json
+│   │   ├── antónimos.json
+│   │   ├── sustantivos.json
+│   │   └── verbos.json
+│   │
+│   ├── matematicas/        # ← carpeta para matemáticas
+│   │   ├── sumas.json
+│   │   ├── restas.json
+│   │   ├── multiplicacion.json
+│   │   └── fracciones.json
+│   │
+│   ├── historia/           # ← carpeta para historia
+│   │   ├── independencia.json
+│   │   ├── heroes.json
+│   │   └── fechas_importantes.json
+│   │
+│   └── geografia/          # ← carpeta para geografía
+│       ├── paises.json
+│       ├── capitales.json
+│       └── rios.json

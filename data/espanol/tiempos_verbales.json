@@ -1,0 +1,71 @@
+{
+  "titulo": "⏰ Verbos: Pasado, Presente y Futuro",
+  "colorFondo": "#FFEBEE",
+  "colorBoton": "#F44336",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué tiempo verbal expresa una acción que ya pasó?",
+      "opciones": ["Futuro", "Presente", "Pasado"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! El pasado es para acciones que ya terminaron.",
+      "datoDivertido": "🦖 'Caminé' es pasado. ¡Como los dinosaurios! 🦕"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cómo se dice 'comer' en futuro?",
+      "opciones": ["Como", "Comí", "Comeré"],
+      "correcta": 2,
+      "explicacion": "¡Así es! 'Comeré' es algo que sucederá después.",
+      "datoDivertido": "🍕 Mañana 'comeré' pizza. ¡El futuro sabe delicioso! 😋"
+    },
+    {
+      "id": 3,
+      "texto": "¿Cuál es la forma correcta del verbo 'ir' en presente?",
+      "opciones": ["Fui", "Voy", "Iré"],
+      "correcta": 1,
+      "explicacion": "¡Sí! 'Voy' es presente: estoy yendo ahora.",
+      "datoDivertido": "🏃‍♂️ Voy al parque, voy a comer… ¡presente puro! Ahora ⏳"
+    },
+    {
+      "id": 4,
+      "texto": "Pasado del verbo 'hacer'",
+      "opciones": ["Hago", "Haré", "Hice"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! Ayer 'hice' mi tarea.",
+      "datoDivertido": "📝 'Hice' es pasado… ¡ya lo terminaste! 🎉"
+    },
+    {
+      "id": 5,
+      "texto": "Futuro del verbo 'ser'",
+      "opciones": ["Soy", "Era", "Seré"],
+      "correcta": 2,
+      "explicacion": "¡Sí! Mañana 'seré' más fuerte.",
+      "datoDivertido": "🚀 'Seré astronauta', 'seré doctor'… ¡el futuro te espera! ✨"
+    },
+    {
+      "id": 6,
+      "texto": "Verbo irregular: 'venir' en pasado",
+      "opciones": ["Viene", "Vino", "Vendrá"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Ayer él VINO a visitarme.",
+      "datoDivertido": "🚪 'Vino' es pasado… ¡no confundas con el jugo de uvas! 🍇"
+    },
+    {
+      "id": 7,
+      "texto": "Verbo 'ver' en pasado",
+      "opciones": ["Ve", "Veo", "Vio"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! Ayer él VIO una estrella fugaz.",
+      "datoDivertido": "⭐ 'Vio' es pasado… ¡ya no está viendo, ya vio! 👓"
+    },
+    {
+      "id": 8,
+      "texto": "¿Qué es conjugar un verbo?",
+      "opciones": ["Cambiar su terminación según tiempo y persona", "Dibujarlo", "Cantarlo"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Conjugar es cambiar el verbo: yo como, tú comes, él comió.",
+      "datoDivertido": "🎭 Conjugar es como disfrazar al verbo: ayer, hoy o mañana… ¡siempre actúa! 🎬"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "titulo": "📚 Cuento, Novela y Leyenda: ¡Tres formas de narrar!",
+  "colorFondo": "#E0F7FA",
+  "colorBoton": "#00BCD4",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Cuál es una característica del cuento?",
+      "opciones": ["Muchos personajes", "Pocos personajes y hechos rápidos", "Muchos capítulos"],
+      "correcta": 1,
+      "explicacion": "¡Sí! El cuento es breve y va directo al final.",
+      "datoDivertido": "⚡ El cuento es como un rayo: ¡aparece rápido y se va! 🌩️"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál es una característica de la novela?",
+      "opciones": ["Muy corta", "Muchos personajes y tramas secundarias", "Solo un hecho central"],
+      "correcta": 1,
+      "explicacion": "¡Correcto! La novela es larga, con personajes que evolucionan.",
+      "datoDivertido": "📖 Una novela es como una serie: ¡capítulo tras capítulo, te atrapa! 📺"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué hace especial a la leyenda?",
+      "opciones": ["Es totalmente inventada", 
+      "Se transmite oralmente y mezcla realidad con magia", "Solo la escriben niños"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Las leyendas viajan de boca en boca.",
+      "datoDivertido": "👵 Mi abuela me contaba leyendas… ¡y yo se las contaré a mis nietos! 👶"
+    },
+    {
+      "id": 4,
+      "texto": "¿En qué se parecen cuento, novela y leyenda?",
+      "opciones": ["Todos son textos narrativos con narrador y personajes", "Todos son muy largos", "Todos son poemas"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Los tres pertenecen al género narrativo.",
+      "datoDivertido": "🎯 Los tres tienen personajes, acciones y un narrador… ¡tres primos literarios! 👥"
+    },
+    {
+      "id": 5,
+      "texto": "¿Cuál es la estructura del cuento?",
+      "opciones": ["Inicio, quiebre, desarrollo y desenlace", "Solo inicio y final", "Sin estructura"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Plantea un problema, lo desarrolla y lo resuelve.",
+      "datoDivertido": "🎢 Como una montaña rusa: sube (problema) y baja (solución) ¡qué emoción! 🎡"
+    },
+    {
+      "id": 6,
+      "texto": "¿Para qué sirven las leyendas?",
+      "opciones": ["Para explicar el origen de algo", "Para solo entretener", "Para aprender matemáticas"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Explican por qué existe el mar, el Sol, los animales.",
+      "datoDivertido": "🌊 Según una leyenda, las arañas se volvieron pulpos… ¡magia del océano! 🐙"
+    }
+  ]
+}

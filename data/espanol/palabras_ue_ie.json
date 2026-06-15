@@ -1,0 +1,47 @@
+{
+  "titulo": "🥚 Palabras con 'ue' e 'ie': ¡Con H inicial!",
+  "colorFondo": "#FCE4EC",
+  "colorBoton": "#E91E63",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Cómo se escribe la palabra 'huevo'?",
+      "opciones": ["uevo", "güevo", "huevo"],
+      "correcta": 2,
+      "explicacion": "¡Claro! Lleva H al inicio por el diptongo 'ue'.",
+      "datoDivertido": "🐔 La gallina pone un HUEVO. ¡No olvides la H, o será un 'uevo' raro! 😂"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuál palabra empieza con 'hie'?",
+      "opciones": ["hielo", "ielo", "gelo"],
+      "correcta": 0,
+      "explicacion": "¡Así es! 'Hielo' lleva H y el diptongo 'ie'.",
+      "datoDivertido": "🧊 HIELO, HIEDRA, HIERRO… ¡todas tienen H y suenan a frío o fuerza! ⛓️"
+    },
+    {
+      "id": 3,
+      "texto": "Completa: 'Dejó una _____ en el suelo'",
+      "opciones": ["huela", "huella", "güella"],
+      "correcta": 1,
+      "explicacion": "¡Huella! Con H y diptongo 'ue'.",
+      "datoDivertido": "🐾 Las huellas de tus pies… ¡también llevan H escondida! 🦶"
+    },
+    {
+      "id": 4,
+      "texto": "¿Cuál NO se escribe con H?",
+      "opciones": ["Hueco", "Huevo", "Ueco ❌"],
+      "correcta": 2,
+      "explicacion": "¡'Ueco' no existe! Se escribe 'hueco' con H.",
+      "datoDivertido": "🕳️ Hueco, huevo, hueso… ¡todos empiezan con 'hue'! 🦴"
+    },
+    {
+      "id": 5,
+      "texto": "La palabra 'hiedra' significa…",
+      "opciones": ["Planta trepadora", "Piedra", "Hielo"],
+      "correcta": 0,
+      "explicacion": "¡Sí! La hiedra es esa planta que sube por las paredes.",
+      "datoDivertido": "🌱 La hiedra se pega a los muros… ¡como un abrazo verde! 💚"
+    }
+  ]
+}

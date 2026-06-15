@@ -1,0 +1,103 @@
+{
+  "titulo": "📖 Géneros Literarios: ¡Cuentos, versos y teatro!",
+  "colorFondo": "#FFF8E1",
+  "colorBoton": "#FFC107",
+  "preguntas": [
+    {
+      "id": 1,
+      "texto": "¿Qué es un género literario?",
+      "opciones": ["Un tipo de libro", "Un grupo de obras con características similares 📚", "Un autor famoso"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Los géneros agrupan obras parecidas para estudiarlas mejor.",
+      "datoDivertido": "🎭 Como clasificar juguetes: peluches, carros y muñecas… ¡cada quien en su grupo! 🧸"
+    },
+    {
+      "id": 2,
+      "texto": "¿Cuáles son los tres géneros literarios principales?",
+      "opciones": ["Narrativo, lírico y drama", "Cuento, novela y poesía", "Leyenda, fábula y mito"],
+      "correcta": 0,
+      "explicacion": "¡Correcto! Narrativo (cuenta historias), lírico (expresa sentimientos) y drama (para actuar).",
+      "datoDivertido": "🎪 Tres en uno: ¡el narrador habla, el poeta canta y el actor actúa! 🎬"
+    },
+    {
+      "id": 3,
+      "texto": "¿Qué hace el género narrativo?",
+      "opciones": ["Expresar sentimientos", "Contar acciones y aventuras", "Ser representado en teatro"],
+      "correcta": 1,
+      "explicacion": "¡Sí! Un narrador cuenta lo que les pasa a los personajes.",
+      "datoDivertido": "🗣️ 'Había una vez…' ¡esa es la marca del género narrativo! ✨"
+    },
+    {
+      "id": 4,
+      "texto": "¿Cómo se escribe el género narrativo?",
+      "opciones": ["En verso", "En prosa (renglones completos)", "En diálogos"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! La prosa usa renglones de lado a lado de la página.",
+      "datoDivertido": "📄 Como este texto que lees ahora… ¡eso es prosa! 👀"
+    },
+    {
+      "id": 5,
+      "texto": "¿Qué es el género lírico o poesía?",
+      "opciones": ["Contar aventuras", "Expresar sentimientos e ideas", "Actuar en teatro"],
+      "correcta": 1,
+      "explicacion": "¡Sí! La poesía habla del corazón, no de acciones.",
+      "datoDivertido": "❤️ 'Te quiero', 'tristeza', 'alegría'… ¡la poesía es pura emoción!"
+    },
+    {
+      "id": 6,
+      "texto": "¿En qué se escribe la poesía?",
+      "opciones": ["En prosa", "En verso (líneas cortas) 📏", "En diálogos"],
+      "correcta": 1,
+      "explicacion": "¡Así es! Los versos son líneas cortas que forman estrofas.",
+      "datoDivertido": "🎶 'Rosa es una flor / que da mucho amor'… ¡verso y rima!"
+    },
+    {
+      "id": 7,
+      "texto": "¿Qué caracteriza al género drama o teatro?",
+      "opciones": ["Tiene un narrador", "Se escribe en versos", "No hay narrador, solo diálogos 🎭"],
+      "correcta": 2,
+      "explicacion": "¡Correcto! Los personajes hablan directamente sin narrador.",
+      "datoDivertido": "🎟️ En el teatro, ¡los actores son los personajes! No hay quien cuente, solo quien actúa 🎬"
+    },
+    {
+      "id": 8,
+      "texto": "¿Para qué sirve el drama o teatro?",
+      "opciones": ["Para leer en silencio", "Para ser representado por actores 🎭", "Para escribir poemas"],
+      "correcta": 1,
+      "explicacion": "¡Sí! El drama nace para subir al escenario.",
+      "datoDivertido": "🎪 ¡Luces, cámaras, acción! El teatro es pura actuación ✨"
+    },
+    {
+      "id": 9,
+      "texto": "¿Cuál es la diferencia entre cuento y novela?",
+      "opciones": ["El cuento es más largo", "La novela es más extensa y con más personajes", "Son iguales"],
+      "correcta": 1,
+      "explicacion": "¡Sí! La novela es el hermano mayor del cuento.",
+      "datoDivertido": "📖 El cuento es una merienda, la novela es un banquete de 500 páginas 🍽️"
+    },
+    {
+      "id": 10,
+      "texto": "¿Qué es una leyenda?",
+      "opciones": ["Historia totalmente inventada", "Relato oral con hechos reales + magia", "Un poema largo"],
+      "correcta": 1,
+      "explicacion": "¡Exacto! Mezcla realidad y fantasía, y se transmite de generación en generación.",
+      "datoDivertido": "🗣️ Tus abuelos cuentan leyendas… ¡como la Llorona o el Cadejos! 👻"
+    },
+    {
+      "id": 11,
+      "texto": "¿Qué tipo de texto es 'El señor Sol y los niñitos huracanes'?",
+      "opciones": ["Leyenda", "Poesía", "Teatro"],
+      "correcta": 0,
+      "explicacion": "¡Sí! Explica el origen del calor matutino con magia.",
+      "datoDivertido": "🔥 Los huracancitos hacen que el Sol caliente… ¡qué leyenda tan creativa! 🌀"
+    },
+    {
+      "id": 12,
+      "texto": "¿Qué tipo de texto es 'Rinín Renacuajo'?",
+      "opciones": ["Cuento", "Poesía o lírica", "Leyenda"],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Está escrito en verso con rima.",
+      "datoDivertido": "🎩 'Rinín Renacuajo, muy tieso y muy majo'… ¡eso es poesía! 📜"
+    }
+  ]
+}
