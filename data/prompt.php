@@ -3,6 +3,7 @@ Necesito un archivo JSON para un juego educativo interactivo de preguntas y resp
 El formato debe ser exactamente el siguiente:
 
 {
+  "tipo": "[Título llamativo con emoji]",
   "titulo": "[Título llamativo con emoji]",
   "colorFondo": "[código hexadecimal color claro]",
   "colorBoton": "[código hexadecimal color vibrante]",

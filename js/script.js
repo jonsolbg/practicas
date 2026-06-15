@@ -1,47 +1,27 @@
-// script.js - Lógica principal de la práctica con feedback visual en botones
+// ============================================
+// script.js - Lógica principal de la práctica
+// Soporta: Múltiple, Verdadero/Falso, Asociación
+// ============================================
 
-// Variables globales
-let preguntas = temaData.preguntas;
+// ============================================
+// VARIABLES GLOBALES
+// ============================================
+let preguntas = [];
 let indice = 0;
 let aciertos = 0;
 let aciertosSeguidos = 0;
 let bloqueado = false;
 let preguntaActual = null;
 
-// Cargar configuración de racha
-let configRacha = typeof temaData.racha !== 'undefined' ? temaData.racha : null;
-
-
-// ============================================
-// SONIDOS
-// ============================================
+// Configuración
+let configRacha = null;
 let sonidosActivados = false;
 let volumenSonidos = 0.7;
 
-// Cargar configuración de sonidos (desde config.json pasada por PHP)
-function cargarConfigSonidos() {
-    if (typeof configSonidos !== 'undefined' && configSonidos) {
-        sonidosActivados = configSonidos.activo === true;
-        volumenSonidos = configSonidos.volumen || 0.7;
-    }
-}
-
-function reproducirSonido(id) {
-    if (!sonidosActivados) return;
-    
-    let audio = document.getElementById(id);
-    if (audio) {
-        audio.volume = volumenSonidos;
-        audio.currentTime = 0;  // Reiniciar por si ya estaba sonando
-        audio.play().catch(e => console.log('Error reproduciendo sonido:', e));
-    }
-}
-
-// Llamar al inicio
-cargarConfigSonidos();
-
-// Detectar tipo de pregunta para respuestas (retrocompatibilidad)
-function obtenerTipoRespuesta(pregunta) {
+// ============================================
+// DETECCIÓN DE TIPO (retrocompatibilidad)
+// ============================================
+function obtenerTipoPregunta(pregunta) {
     if (pregunta.tipo) return pregunta.tipo;
     if (pregunta.opciones && Array.isArray(pregunta.opciones)) return 'multiple';
     if (pregunta.pares && Array.isArray(pregunta.pares)) return 'asociar';
@@ -49,7 +29,28 @@ function obtenerTipoRespuesta(pregunta) {
 }
 
 // ============================================
-// ACTUALIZAR ESTRELLAS Y RACHA
+// SONIDOS
+// ============================================
+function cargarConfigSonidos() {
+    if (typeof configSonidos !== 'undefined' && configSonidos) {
+        sonidosActivados = configSonidos.activo === true;
+        volumenSonidos = configSonidos.volumen || 0.7;
+        console.log("🔊 Sonidos activados:", sonidosActivados);
+    }
+}
+
+function reproducirSonido(id) {
+    if (!sonidosActivados) return;
+    let audio = document.getElementById(id);
+    if (audio) {
+        audio.volume = volumenSonidos;
+        audio.currentTime = 0;
+        audio.play().catch(e => console.log('Error reproduciendo sonido:', e));
+    }
+}
+
+// ============================================
+// ESTRELLAS Y RACHA
 // ============================================
 function actualizarEstrellas() {
     let estrellas = "";
@@ -60,11 +61,10 @@ function actualizarEstrellas() {
     let extra = aciertos > 5 ? ` +${aciertos - 5}` : "";
     document.getElementById("estrellasDiv").innerHTML = estrellas + `<span style="font-size: 1rem;">${extra}</span>`;
     
-    // Mostrar racha actual
     if (configRacha && configRacha.activo && aciertosSeguidos >= (configRacha.niveles && configRacha.niveles[0] ? configRacha.niveles[0].aciertos : 3)) {
         let nivelActual = getNivelRacha();
         if (nivelActual) {
-            let rachaHtml = `<div class="indicador-racha" style="color: ${nivelActual.color};">
+            let rachaHtml = `<div class="indicador-racha" style="color: ${nivelActual.color}; margin-top: 10px; font-size: 1.3rem;">
                                 ${nivelActual.emoji} Racha: ${aciertosSeguidos} seguidos ${nivelActual.emoji}
                               </div>`;
             if (!document.getElementById("indicadorRacha")) {
@@ -99,8 +99,8 @@ function getNivelRacha() {
 function mostrarAnimacionRacha() {
     let nivel = getNivelRacha();
     if (!nivel) return;
-
-    reproducirSonido('sonidoRacha');  // ← AGREGAR ESTA LÍNEA
+    
+    reproducirSonido('sonidoRacha');
     
     let animDiv = document.createElement("div");
     animDiv.className = "animacion-racha";
@@ -136,9 +136,7 @@ function mostrarAnimacionRacha() {
         crearEstrellasVoladoras();
     }
     
-    setTimeout(() => {
-        animDiv.remove();
-    }, 1500);
+    setTimeout(() => { animDiv.remove(); }, 1500);
 }
 
 function crearConfeti() {
@@ -173,51 +171,164 @@ function crearEstrellasVoladoras() {
     }
 }
 
-// Agregar CSS para las animaciones
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes aparecerYDesaparecer {
-        0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-        20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
-        80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-        100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-    }
-    @keyframes caer {
-        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-    }
-    @keyframes subir {
-        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-    }
-    .opcion-seleccionada {
-        background: #ff9800 !important;
-        transform: scale(1.02);
-        box-shadow: 0 0 15px rgba(255,152,0,0.5);
-    }
-    .opcion-correcta {
-        background: #4caf50 !important;
-        transform: scale(1.02);
-    }
-    .opcion-incorrecta {
-        background: #f44336 !important;
-        transform: scale(0.98);
-    }
-`;
-document.head.appendChild(style);
+// Agregar CSS de animaciones si no existe
+if (!document.getElementById('animaciones-css')) {
+    let style = document.createElement('style');
+    style.id = 'animaciones-css';
+    style.textContent = `
+        @keyframes aparecerYDesaparecer {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+        }
+        @keyframes caer {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        @keyframes subir {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        .opcion-seleccionada {
+            background: #ff9800 !important;
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255,152,0,0.5);
+        }
+        .opcion-correcta {
+            background: #4caf50 !important;
+            transform: scale(1.02);
+        }
+        .opcion-incorrecta {
+            background: #f44336 !important;
+            transform: scale(0.98);
+        }
+    `;
+    document.head.appendChild(style);
+}
 
 // ============================================
-// LIMPIAR ESTILOS DE TODOS LOS BOTONES
+// LIMPIAR ESTILOS DE BOTONES
 // ============================================
 function limpiarEstilosBotones() {
-    let botones = document.querySelectorAll(".opcion");
+    let botones = document.querySelectorAll(".opcion, .vf-btn");
     for (let i = 0; i < botones.length; i++) {
         botones[i].classList.remove("opcion-seleccionada", "opcion-correcta", "opcion-incorrecta");
     }
 }
 
 // ============================================
-// MOSTRAR PREGUNTA
+// MANEJAR RESPUESTA (Múltiple y V/F)
+// ============================================
+function manejarRespuesta(tipo, valor) {
+    if (bloqueado) return;
+    
+    let esCorrecta = false;
+    let respuestaCorrectaTexto = "";
+    
+    if (tipo === 'multiple') {
+        esCorrecta = (parseInt(valor) === preguntaActual.correcta);
+        respuestaCorrectaTexto = preguntaActual.opciones[preguntaActual.correcta];
+    } else if (tipo === 'vf') {
+        esCorrecta = (valor === 'true') === preguntaActual.correcta;
+        respuestaCorrectaTexto = preguntaActual.correcta ? 'Verdadero' : 'Falso';
+    }
+    
+    bloqueado = true;
+    
+    // Marcar visualmente los botones
+    let botones = document.querySelectorAll(".opcion, .vf-btn");
+    for (let i = 0; i < botones.length; i++) {
+        let btn = botones[i];
+        if (tipo === 'multiple') {
+            if (parseInt(btn.dataset.valor) === preguntaActual.correcta) {
+                btn.classList.add("opcion-correcta");
+            }
+            if (btn === document.querySelector(`.opcion[data-valor="${valor}"]`) && !esCorrecta) {
+                btn.classList.add("opcion-incorrecta");
+            }
+        } else if (tipo === 'vf') {
+            if ((btn.dataset.valor === 'true' && preguntaActual.correcta === true) ||
+                (btn.dataset.valor === 'false' && preguntaActual.correcta === false)) {
+                btn.classList.add("opcion-correcta");
+            }
+            if (btn.dataset.valor === valor && !esCorrecta) {
+                btn.classList.add("opcion-incorrecta");
+            }
+        }
+        btn.disabled = true;
+    }
+    
+    let feedbackHtml = "";
+    
+    if (esCorrecta) {
+        aciertos++;
+        aciertosSeguidos++;
+        actualizarEstrellas();
+        reproducirSonido('sonidoCorrecto');
+        feedbackHtml = `<span style="color:green; font-size:2rem;">✅ ¡Correcto!</span><br>${preguntaActual.explicacion}`;
+        
+        let nivelAlcanzado = getNivelRacha();
+        if (nivelAlcanzado && aciertosSeguidos >= nivelAlcanzado.aciertos && (aciertosSeguidos - 1) < nivelAlcanzado.aciertos) {
+            mostrarAnimacionRacha();
+        }
+        
+        if (typeof cambiarMensajePersonaje !== 'undefined') {
+            if (aciertosSeguidos >= 5) {
+                cambiarMensajePersonaje("🔥 ¡Vas volando! " + aciertosSeguidos + " seguidas 🔥");
+            } else {
+                cambiarMensajePersonaje("🎉 ¡Excelente! +1 estrella 🎉");
+            }
+        }
+    } else {
+        if (configRacha && configRacha.resetearAlFallar && aciertosSeguidos > 0) {
+            let rachaPerdida = aciertosSeguidos;
+            aciertosSeguidos = 0;
+            actualizarEstrellas();
+            feedbackHtml = `<span style="color:red; font-size:2rem;">❌ Incorrecto</span><br>La respuesta correcta es: <strong>${respuestaCorrectaTexto}</strong><br>${preguntaActual.explicacion}<div style="color:orange; margin-top:10px;">⚠️ ¡Se acabó la racha de ${rachaPerdida}! Pero puedes empezar otra ⚠️</div>`;
+        } else {
+            aciertosSeguidos = 0;
+            actualizarEstrellas();
+            feedbackHtml = `<span style="color:red; font-size:2rem;">❌ Incorrecto</span><br>La respuesta correcta es: <strong>${respuestaCorrectaTexto}</strong><br>${preguntaActual.explicacion}<div style="color:#ff9800; margin-top:10px;">💪 ¡Sigue intentando! La próxima será la buena 💪</div>`;
+        }
+        reproducirSonido('sonidoIncorrecto');
+        
+        if (typeof cambiarMensajePersonaje !== 'undefined') {
+            cambiarMensajePersonaje("😅 ¡Ánimo! Revisa por qué era esa respuesta.");
+        }
+    }
+    
+    if (preguntaActual.datoDivertido) {
+        feedbackHtml += `<div class="dato-div">🎲 Dato curioso: ${preguntaActual.datoDivertido}</div>`;
+    }
+    
+    document.getElementById("feedbackDiv").innerHTML = feedbackHtml;
+    document.getElementById("btnSiguiente").style.display = "block";
+}
+
+// ============================================
+// CONFIGURAR EVENTOS DE RESPUESTA
+// ============================================
+function configurarEventosRespuesta() {
+    let botones = document.querySelectorAll(".opcion");
+    for (let i = 0; i < botones.length; i++) {
+        let btn = botones[i];
+        let tipo = btn.dataset.tipo || 'multiple';
+        let valor = btn.dataset.valor !== undefined ? btn.dataset.valor : btn.dataset.opc;
+        
+        // Remover event listeners antiguos para evitar duplicados
+        let nuevoBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(nuevoBtn, btn);
+        
+        nuevoBtn.addEventListener('click', function() {
+            if (tipo === 'asociar-item' || tipo === 'asociar-coincidencia') return;
+            manejarRespuesta(tipo, valor);
+        });
+    }
+}
+
+// ============================================
+// MOSTRAR PREGUNTA ACTUAL
 // ============================================
 function mostrarPregunta() {
     if (indice >= preguntas.length) {
@@ -235,142 +346,62 @@ function mostrarPregunta() {
         document.getElementById("feedbackDiv").innerHTML = `<a href='index.php' class='btn-siguiente' style='display:inline-block; text-decoration:none;'>🏠 Volver al menú</a>`;
         document.getElementById("btnSiguiente").style.display = "none";
         document.getElementById("btnReiniciar").style.display = "inline-block";
-
-        // Al finalizar la práctica, guardar el progreso
-        if (indice >= preguntas.length) {
-            // ... código existente ...
-            
-            // NUEVO: Guardar progreso
-            guardarProgreso(aciertos, preguntas.length, aciertosSeguidos, temaData.titulo);
-            
-            // ... resto del código ...
-        }
+        
+        guardarProgreso(aciertos, preguntas.length, aciertosSeguidos, temaData.titulo);
         return;
     }
-
-    preguntaActual = preguntas[indice];
-    document.getElementById("preguntaTexto").innerText = preguntaActual.texto;
     
-    let opcionesHtml = "";
-    for (let i = 0; i < preguntaActual.opciones.length; i++) {
-        opcionesHtml += `<button class="opcion" data-opc="${i}">${preguntaActual.opciones[i]}</button>`;
+    preguntaActual = preguntas[indice];
+    let tipo = obtenerTipoPregunta(preguntaActual);
+    
+    // Renderizar según el tipo
+    if (typeof renderizarPregunta === 'function') {
+        let html = renderizarPregunta(preguntaActual, indice);
+        document.getElementById("opcionesDiv").innerHTML = html;
+        
+        // Si es asociación, configurar eventos especiales
+        if (tipo === 'asociar' && typeof configurarEventosAsociar === 'function') {
+            setTimeout(() => {
+                configurarEventosAsociar(preguntaActual, indice);
+            }, 50);
+        } else {
+            configurarEventosRespuesta();
+        }
+    } else {
+        // Fallback por si tipos_preguntas.js no cargó
+        document.getElementById("preguntaTexto").innerText = preguntaActual.texto;
+        let opcionesHtml = '<div class="opciones">';
+        for (let i = 0; i < preguntaActual.opciones.length; i++) {
+            opcionesHtml += `<button class="opcion" data-tipo="multiple" data-valor="${i}">${preguntaActual.opciones[i]}</button>`;
+        }
+        opcionesHtml += '</div>';
+        document.getElementById("opcionesDiv").innerHTML = opcionesHtml;
+        configurarEventosRespuesta();
     }
-    document.getElementById("opcionesDiv").innerHTML = opcionesHtml;
+    
     document.getElementById("feedbackDiv").innerHTML = "";
     document.getElementById("btnSiguiente").style.display = "none";
     bloqueado = false;
-
-    let botones = document.querySelectorAll(".opcion");
-    for (let i = 0; i < botones.length; i++) {
-        botones[i].addEventListener("click", (function(idx) {
-            return function() { 
-                // Marcar el botón como seleccionado antes de responder
-                limpiarEstilosBotones();
-                botones[idx].classList.add("opcion-seleccionada");
-                responder(parseInt(idx));
-            };
-        })(botones[i].dataset.opc));
-    }
-
+    
     if (typeof cambiarMensajePersonaje !== 'undefined') {
         cambiarMensajePersonaje("🎤 Lee bien y elige la respuesta 💪");
     }
 }
 
 // ============================================
-// RESPONDER PREGUNTA
-// ============================================
-function responder(opcElegida) {
-    if (bloqueado) return;
-    let esCorrecta = (opcElegida === preguntaActual.correcta);
-    bloqueado = true;
-
-    // Marcar visualmente el resultado
-    let botones = document.querySelectorAll(".opcion");
-    let botonCorrecto = botones[preguntaActual.correcta];
-    
-    if (esCorrecta) {
-        botones[opcElegida].classList.remove("opcion-seleccionada");
-        botones[opcElegida].classList.add("opcion-correcta");
-    } else {
-        botones[opcElegida].classList.remove("opcion-seleccionada");
-        botones[opcElegida].classList.add("opcion-incorrecta");
-        botonCorrecto.classList.add("opcion-correcta");
-    }
-    
-    // Deshabilitar todos los botones después de responder
-    for (let i = 0; i < botones.length; i++) {
-        botones[i].disabled = true;
-    }
-    
-    let feedbackHtml = "";
-    let rachaAntes = aciertosSeguidos;
-    
-    if (esCorrecta) {
-        aciertos++;
-        aciertosSeguidos++;
-        reproducirSonido('sonidoCorrecto');  // ← AGREGAR ESTA LÍNEA
-        actualizarEstrellas();
-        feedbackHtml = `<span style="color:green; font-size:2rem;">✅ ¡Correcto!</span><br>${preguntaActual.explicacion}`;
-        
-        let nivelAlcanzado = getNivelRacha();
-        if (nivelAlcanzado && rachaAntes < nivelAlcanzado.aciertos && aciertosSeguidos >= nivelAlcanzado.aciertos) {
-            mostrarAnimacionRacha();
-        } else if (aciertosSeguidos >= 3) {
-            actualizarEstrellas();
-        }
-        
-        if (typeof cambiarMensajePersonaje !== 'undefined') {
-            if (aciertosSeguidos >= 5) {
-                cambiarMensajePersonaje("🔥 ¡Vas volando! " + aciertosSeguidos + " seguidas 🔥");
-            } else {
-                cambiarMensajePersonaje("🎉 ¡Excelente! +1 estrella 🎉");
-            }
-        }
-    } else {
-        let correctaTexto = preguntaActual.opciones[preguntaActual.correcta];
-        reproducirSonido('sonidoIncorrecto');  // ← AGREGAR ESTA LÍNEA
-        feedbackHtml = `<span style="color:red; font-size:2rem;">❌ Casi...</span><br>La respuesta correcta es: <strong>${correctaTexto}</strong><br>${preguntaActual.explicacion}`;
-        
-        if (configRacha && configRacha.resetearAlFallar && aciertosSeguidos > 0) {
-            let rachaPerdida = aciertosSeguidos;
-            aciertosSeguidos = 0;
-            actualizarEstrellas();
-            feedbackHtml += `<div style="color:orange; margin-top:10px;">⚠️ ¡Se acabó la racha de ${rachaPerdida}! Pero puedes empezar otra ⚠️</div>`;
-        } else {
-            feedbackHtml += `<div style="color:#ff9800; margin-top:10px;">💪 ¡Sigue intentando! La racha no se pierde 💪</div>`;
-        }
-        
-        if (typeof cambiarMensajePersonaje !== 'undefined') {
-            cambiarMensajePersonaje("😅 ¡Ánimo! Revisa por qué era esa respuesta.");
-        }
-    }
-    
-    if (preguntaActual.datoDivertido) {
-        feedbackHtml += `<div class="dato-div">🎲 Dato curioso: ${preguntaActual.datoDivertido}</div>`;
-    }
-    document.getElementById("feedbackDiv").innerHTML = feedbackHtml;
-    document.getElementById("btnSiguiente").style.display = "block";
-}
-
-// ============================================
-// EVENTOS Y INICIO
+// SIGUIENTE PREGUNTA
 // ============================================
 document.getElementById("btnSiguiente").addEventListener("click", function() {
     indice++;
     mostrarPregunta();
 });
 
-mostrarPregunta();
-actualizarEstrellas();
-
 // ============================================
 // GUARDAR PROGRESO EN EL SERVIDOR
 // ============================================
 function guardarProgreso(aciertos, total, rachaMaxima, temaNombre) {
-    // Obtener la categoría y archivo del tema actual
     let urlParams = new URLSearchParams(window.location.search);
-    let temaCompleto = urlParams.get('tema');  // ej: "ciencias/renal"
+    let temaCompleto = urlParams.get('tema');
     
     let categoria = "";
     let archivo = "";
@@ -395,7 +426,6 @@ function guardarProgreso(aciertos, total, rachaMaxima, temaNombre) {
         racha_maxima: rachaMaxima
     };
     
-    // Enviar al servidor usando fetch
     fetch('guardar_progreso.php', {
         method: 'POST',
         headers: {
@@ -403,4 +433,35 @@ function guardarProgreso(aciertos, total, rachaMaxima, temaNombre) {
         },
         body: JSON.stringify(datos)
     }).catch(error => console.log('Error guardando progreso:', error));
+}
+
+// ============================================
+// INICIALIZACIÓN
+// ============================================
+function inicializar() {
+    // Cargar preguntas
+    if (typeof temaData !== 'undefined' && temaData.preguntas) {
+        preguntas = temaData.preguntas;
+    }
+    
+    // Cargar configuración de racha
+    if (typeof temaData.racha !== 'undefined') {
+        configRacha = temaData.racha;
+    } else if (typeof configRachaGlobal !== 'undefined') {
+        configRacha = configRachaGlobal;
+    }
+    
+    // Cargar configuración de sonidos
+    cargarConfigSonidos();
+    
+    // Iniciar juego
+    actualizarEstrellas();
+    mostrarPregunta();
+}
+
+// Iniciar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inicializar);
+} else {
+    inicializar();
 }

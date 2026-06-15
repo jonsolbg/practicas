@@ -262,9 +262,12 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     document.getElementById("btnReiniciar").addEventListener("click", function() {
         window.location.href = "practica.php?tema=" + encodeURIComponent(temaActual);
     });
-
-
-    <script src="js/tipos_preguntas.js"></script>
 </script>
+
+<script src="js/tipos_preguntas.js"></script>
+<script src="js/script.js"></script>
+<script src="js/personaje.js"></script>
+<script src="js/voz.js"></script>
+
 </body>
 </html>
