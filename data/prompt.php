@@ -73,6 +73,7 @@ El sistema soporta TRES tipos de preguntas:
 - Explicaciones cortas y positivas
 - Colores vivos, hagámoslo atractivo para niños
 - Mezcla los 3 tipos de preguntas en el mismo archivo para variedad pero agrupando, primero algunas de múltiple, luego verdadero/falso y finalmente asociación.
+- De 10 a 12 preguntas por tema. Pueden ser más si son de tipo "asociación" o "verdadero/falso".
 
 ## Tema del JSON:
 [TEMA AQUÍ]

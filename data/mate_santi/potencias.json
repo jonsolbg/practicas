@@ -1,0 +1,123 @@
+{
+  "titulo": "⚡ ¡Potencia tu mente! 🚀",
+  "colorFondo": "#2A9D8F",
+  "colorBoton": "#E9C46A",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Cuánto es 2⁵?",
+      "opciones": ["10", "25", "32", "16"],
+      "correcta": 2,
+      "explicacion": "¡Excelente! 2⁵ = 2 × 2 × 2 × 2 × 2 = 32.",
+      "datoDivertido": "🐘 Una hormiga levanta 2⁵ veces su peso, ¡32 veces más fuerte! 💪"
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cuánto es (-3)²?",
+      "opciones": ["-9", "9", "6", "-6"],
+      "correcta": 1,
+      "explicacion": "(-3)² = (-3) × (-3) = +9.",
+      "datoDivertido": "🎭 Negativos al cuadrado siempre se vuelven positivos. ¡Sonríen! 😄"
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "Simplifica: 5³ × 5²",
+      "opciones": ["5⁶", "25⁵", "5⁵", "25⁶"],
+      "correcta": 2,
+      "explicacion": "Misma base → sumamos exponentes: 3+2=5 → 5⁵.",
+      "datoDivertido": "✨ Multiplicar potencias = sumar exponentes. ¡Magia matemática! 🎩"
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Cuánto es 10⁴?",
+      "opciones": ["1000", "10000", "100", "100000"],
+      "correcta": 1,
+      "explicacion": "10⁴ = 10 × 10 × 10 × 10 = 10,000.",
+      "datoDivertido": "🌍 10,000 pasos al día, ¡la meta saludable! 🚶‍♀️"
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Cuál es el resultado de 7⁰?",
+      "opciones": ["0", "1", "7", "ninguna"],
+      "correcta": 1,
+      "explicacion": "Cualquier número (excepto 0) elevado a 0 da 1.",
+      "datoDivertido": "🎉 ¡Potencia cero = 1! Hasta 1,000,000⁰ = 1. ¡Magia total!"
+    },
+    {
+      "id": 6,
+      "tipo": "vf",
+      "texto": "(-2)⁴ da como resultado -16.",
+      "correcta": false,
+      "explicacion": "Es falso. (-2)⁴ = (+16), porque el exponente es par.",
+      "datoDivertido": "🔄 4 signos negativos se cancelan en parejas, ¡dan positivo!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "En la potencia aⁿ, 'a' se llama exponente.",
+      "correcta": false,
+      "explicacion": "Falso. 'a' es la base, 'n' es el exponente.",
+      "datoDivertido": "🏠 La base es el piso, el exponente es cuántas veces lo usas."
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "8³ es igual a 8 × 8 × 8.",
+      "correcta": true,
+      "explicacion": "¡Verdadero! El exponente 3 indica multiplicar la base 3 veces.",
+      "datoDivertido": "🐙 8³ = 512, ¡más patas que un pulpo gigante!"
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "4² × 4³ = 4⁶ (verdadero o falso).",
+      "correcta": false,
+      "explicacion": "Falso. Es 4⁵, porque 2+3=5, no 6.",
+      "datoDivertido": "🧮 No sumes de más: ¡el exponente se suma, no multiplica!"
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "🔗 Asocia cada potencia con su resultado:",
+      "pares": [
+        {"texto": "3⁴", "coincide": "81"},
+        {"texto": "2⁶", "coincide": "64"},
+        {"texto": "4³", "coincide": "64"},
+        {"texto": "(-1)⁵", "coincide": "-1"}
+      ],
+      "explicacion": "3⁴=81, 2⁶=64, 4³=64, (-1)⁵=-1.",
+      "datoDivertido": "🤯 64 aparece dos veces, ¡distintas potencias pueden dar el mismo resultado!"
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "📐 Une cada propiedad con su ejemplo:",
+      "pares": [
+        {"texto": "aᵐ × aⁿ", "coincide": "aᵐ⁺ⁿ"},
+        {"texto": "aᵐ ÷ aⁿ", "coincide": "aᵐ⁻ⁿ"},
+        {"texto": "(aᵐ)ⁿ", "coincide": "aᵐ·ⁿ"},
+        {"texto": "a⁰", "coincide": "1"}
+      ],
+      "explicacion": "¡Propiedades clave! Suma, resta y multiplica exponentes según la regla.",
+      "datoDivertido": "📜 Estas leyes son como recetas mágicas: ¡siempre funcionan! 🧙‍♀️"
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "⚡ Relaciona cada expresión con la correcta:",
+      "pares": [
+        {"texto": "10³", "coincide": "1000"},
+        {"texto": "2¹⁰", "coincide": "1024"},
+        {"texto": "5²", "coincide": "25"},
+        {"texto": "(-4)²", "coincide": "16"}
+      ],
+      "explicacion": "10³=1000, 2¹⁰=1024, 5²=25, (-4)²=16.",
+      "datoDivertido": "💾 1024 bytes = 1 kilobyte. ¡Las potencias de 2 están en tu computadora!"
+    }
+  ]
+}

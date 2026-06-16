@@ -1,0 +1,123 @@
+{
+  "titulo": "🧩 ¡Operaciones en acción! 🎯",
+  "colorFondo": "#3D405B",
+  "colorBoton": "#F2CC8F",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "Calcula: 3 + 5 × 2",
+      "opciones": ["16", "13", "10", "18"],
+      "correcta": 1,
+      "explicacion": "Primero multiplicación: 5×2=10, luego 3+10=13.",
+      "datoDivertido": "🧙‍♂️ La multiplicación es maga: ¡siempre va antes que la suma!"
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Cuánto es (8 - 3) × 2?",
+      "opciones": ["10", "13", "8", "5"],
+      "correcta": 0,
+      "explicacion": "Primero paréntesis: 8-3=5, luego 5×2=10.",
+      "datoDivertido": "🎭 Los paréntesis son como abrazos: ¡lo que está dentro se resuelve primero!"
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "Resuelve: 12 ÷ 3 × 2",
+      "opciones": ["2", "8", "6", "18"],
+      "correcta": 1,
+      "explicacion": "Izquierda a derecha: 12÷3=4, luego 4×2=8.",
+      "datoDivertido": "🚦 Misma jerarquía: ¡se lee como un libro, de izquierda a derecha!"
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué operación va primero en 4 + 6 × (5 - 3)?",
+      "opciones": ["4+6", "6×5", "5-3", "6×2"],
+      "correcta": 2,
+      "explicacion": "Primero el paréntesis: 5-3=2.",
+      "datoDivertido": "🥇 ¡Los paréntesis son los reyes! Siempre primeros."
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "Resultado de 20 - 4² ÷ 2",
+      "opciones": ["8", "12", "2", "18"],
+      "correcta": 1,
+      "explicacion": "Primero potencia: 4²=16, luego división: 16÷2=8, luego resta: 20-8=12.",
+      "datoDivertido": "⚡ Las potencias se resuelven antes que multiplicación y división."
+    },
+    {
+      "id": 6,
+      "tipo": "vf",
+      "texto": "La expresión 2 + 3 × 4 da 20 si se hace de izquierda a derecha sin jerarquía.",
+      "correcta": true,
+      "explicacion": "Verdadero. Sin jerarquía: 2+3=5, 5×4=20. ¡Por eso es importante la jerarquía real!",
+      "datoDivertido": "⚠️ Sin reglas, todos obtendrían resultados distintos. ¡Salvemos las matemáticas!"
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "10 - 2 × 3 = 24.",
+      "correcta": false,
+      "explicacion": "Falso. Primero 2×3=6, luego 10-6=4.",
+      "datoDivertido": "🛑 ¡Cuidado! La multiplicación tiene prioridad, no la resta."
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "En la jerarquía de operaciones, suma y resta tienen la misma prioridad.",
+      "correcta": true,
+      "explicacion": "Verdadero. Se resuelven de izquierda a derecha después de multiplicación/división.",
+      "datoDivertido": "🤝 Suma y resta son amigas: se turnan de izquierda a derecha."
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "Un paréntesis dentro de otro (paréntesis anidados) se resuelve de afuera hacia adentro.",
+      "correcta": false,
+      "explicacion": "Falso. Se resuelve de adentro hacia afuera.",
+      "datoDivertido": "🎁 Como abrir una caja: primero lo más interno, luego lo externo."
+    },
+    {
+      "id": 10,
+      "tipo": "asociar",
+      "texto": "🧮 Une cada expresión con su resultado:",
+      "pares": [
+        {"texto": "5 + 3 × 2", "coincide": "11"},
+        {"texto": "(5 + 3) × 2", "coincide": "16"},
+        {"texto": "10 - 2²", "coincide": "6"},
+        {"texto": "8 ÷ 2 + 4", "coincide": "8"}
+      ],
+      "explicacion": "5+6=11, 8×2=16, 10-4=6, 4+4=8.",
+      "datoDivertido": "🧠 Los paréntesis cambian TODO. ¡Pruébalos!"
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "🎲 Relaciona cada operación combinada con su resultado:",
+      "pares": [
+        {"texto": "2² × 3", "coincide": "12"},
+        {"texto": "18 ÷ 3 + 5", "coincide": "11"},
+        {"texto": "(4 + 2) × (5 - 3)", "coincide": "12"},
+        {"texto": "9 - 3 + 2", "coincide": "8"}
+      ],
+      "explicacion": "4×3=12, 6+5=11, 6×2=12, 6+2=8.",
+      "datoDivertido": "✨ ¡Diferentes caminos pueden llevar al mismo resultado! 12 aparece dos veces."
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔗 Asocia cada expresión con el paso prioritario correcto:",
+      "pares": [
+        {"texto": "3 + 4 × 5", "coincide": "4 × 5"},
+        {"texto": "(3 + 4) × 5", "coincide": "3 + 4"},
+        {"texto": "20 - 2³", "coincide": "2³"},
+        {"texto": "30 ÷ 6 + 2", "coincide": "30 ÷ 6"}
+      ],
+      "explicacion": "Primero siempre: paréntesis, luego potencias, luego ×/÷, luego +/-.",
+      "datoDivertido": "📏 La jerarquía PEMDAS (Paréntesis, Exponentes, Multiplicación/División, Adición/Sustracción)."
+    }
+  ]
+}

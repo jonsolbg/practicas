@@ -331,6 +331,7 @@ function configurarEventosRespuesta() {
 // MOSTRAR PREGUNTA ACTUAL
 // ============================================
 function mostrarPregunta() {
+    // Verificar si ya se terminaron las preguntas
     if (indice >= preguntas.length) {
         let mensajeFinal = `🎉 ¡Misión cumplida! 🎉<br>Acertaste ${aciertos} de ${preguntas.length}.<br>`;
         if (aciertos === preguntas.length) {
@@ -341,46 +342,77 @@ function mostrarPregunta() {
         } else {
             mensajeFinal += "¡Sigue practicando! 💪";
         }
-        document.getElementById("preguntaTexto").innerHTML = mensajeFinal;
-        document.getElementById("opcionesDiv").innerHTML = "";
-        document.getElementById("feedbackDiv").innerHTML = `<a href='index.php' class='btn-siguiente' style='display:inline-block; text-decoration:none;'>🏠 Volver al menú</a>`;
-        document.getElementById("btnSiguiente").style.display = "none";
-        document.getElementById("btnReiniciar").style.display = "inline-block";
+        
+        // Limpiar y mostrar mensaje final
+        const opcionesDiv = document.getElementById("opcionesDiv");
+        const preguntaTexto = document.getElementById("preguntaTexto");
+        const feedbackDiv = document.getElementById("feedbackDiv");
+        const btnSiguiente = document.getElementById("btnSiguiente");
+        const btnReiniciar = document.getElementById("btnReiniciar");
+        
+        if (preguntaTexto) preguntaTexto.innerHTML = mensajeFinal;
+        if (opcionesDiv) opcionesDiv.innerHTML = "";
+        if (feedbackDiv) feedbackDiv.innerHTML = `<a href='index.php' class='btn-siguiente' style='display:inline-block; text-decoration:none;'>🏠 Volver al menú</a>`;
+        if (btnSiguiente) btnSiguiente.style.display = "none";
+        if (btnReiniciar) btnReiniciar.style.display = "inline-block";
         
         guardarProgreso(aciertos, preguntas.length, aciertosSeguidos, temaData.titulo);
         return;
     }
     
+    // Obtener la pregunta actual
     preguntaActual = preguntas[indice];
     let tipo = obtenerTipoPregunta(preguntaActual);
+    
+    // Actualizar el texto de la pregunta (si aplica)
+    const preguntaTextoDiv = document.getElementById("preguntaTexto");
+    if (preguntaTextoDiv && tipo !== 'asociar') {
+        preguntaTextoDiv.innerText = preguntaActual.texto;
+    } else if (preguntaTextoDiv && tipo === 'asociar') {
+        preguntaTextoDiv.innerText = ""; // La asociación ya tiene su propio texto
+    }
     
     // Renderizar según el tipo
     if (typeof renderizarPregunta === 'function') {
         let html = renderizarPregunta(preguntaActual, indice);
-        document.getElementById("opcionesDiv").innerHTML = html;
+        const opcionesDiv = document.getElementById("opcionesDiv");
+        if (opcionesDiv) {
+            opcionesDiv.innerHTML = html;
+        }
         
         // Si es asociación, configurar eventos especiales
         if (tipo === 'asociar' && typeof configurarEventosAsociar === 'function') {
             setTimeout(() => {
                 configurarEventosAsociar(preguntaActual, indice);
-            }, 50);
+            }, 100);
         } else {
-            configurarEventosRespuesta();
+            // Pequeño retraso para asegurar que el DOM esté listo
+            setTimeout(() => {
+                configurarEventosRespuesta();
+            }, 50);
         }
     } else {
-        // Fallback por si tipos_preguntas.js no cargó
-        document.getElementById("preguntaTexto").innerText = preguntaActual.texto;
-        let opcionesHtml = '<div class="opciones">';
-        for (let i = 0; i < preguntaActual.opciones.length; i++) {
-            opcionesHtml += `<button class="opcion" data-tipo="multiple" data-valor="${i}">${preguntaActual.opciones[i]}</button>`;
+        // Fallback
+        const opcionesDiv = document.getElementById("opcionesDiv");
+        if (opcionesDiv) {
+            let opcionesHtml = '<div class="opciones">';
+            for (let i = 0; i < preguntaActual.opciones.length; i++) {
+                opcionesHtml += `<button class="opcion" data-tipo="multiple" data-valor="${i}">${preguntaActual.opciones[i]}</button>`;
+            }
+            opcionesHtml += '</div>';
+            opcionesDiv.innerHTML = opcionesHtml;
+            setTimeout(() => {
+                configurarEventosRespuesta();
+            }, 50);
         }
-        opcionesHtml += '</div>';
-        document.getElementById("opcionesDiv").innerHTML = opcionesHtml;
-        configurarEventosRespuesta();
     }
     
-    document.getElementById("feedbackDiv").innerHTML = "";
-    document.getElementById("btnSiguiente").style.display = "none";
+    // Limpiar feedback y ocultar botón siguiente
+    const feedbackDiv = document.getElementById("feedbackDiv");
+    const btnSiguiente = document.getElementById("btnSiguiente");
+    if (feedbackDiv) feedbackDiv.innerHTML = "";
+    if (btnSiguiente) btnSiguiente.style.display = "none";
+    
     bloqueado = false;
     
     if (typeof cambiarMensajePersonaje !== 'undefined') {
@@ -393,7 +425,15 @@ function mostrarPregunta() {
 // ============================================
 document.getElementById("btnSiguiente").addEventListener("click", function() {
     indice++;
-    mostrarPregunta();
+    // Limpiar el contenedor visualmente antes de cargar la siguiente
+    const opcionesDiv = document.getElementById("opcionesDiv");
+    if (opcionesDiv) {
+        opcionesDiv.innerHTML = '<div style="text-align:center; padding:40px;">⏳ Cargando siguiente pregunta...</div>';
+    }
+    // Pequeño retraso para dar tiempo a que el DOM se actualice
+    setTimeout(() => {
+        mostrarPregunta();
+    }, 50);
 });
 
 // ============================================

@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 20px;
-    font-family: 'Segoe UI', 'Comic Neue', 'Chalkboard SE', cursive;
+    font-family: 'Segoe UI', 'Comic Neue', 'Chalkboard SE';
 }
 
 button, .opcion {

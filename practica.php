@@ -36,14 +36,14 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title><?php echo htmlspecialchars($titulo); ?> 🎯</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css?v=3">
     <style>
         * {
             box-sizing: border-box;
         }
         body {
             background: <?php echo $colorFondo; ?>;
-            font-family: 'Comic Neue', 'Segoe UI', 'Comic Neue', 'Chalkboard SE', cursive;
+            font-family: 'Nunito', 'Segoe UI', 'Comic Neue', 'Chalkboard SE';
             text-align: center;
             padding: 20px;
             margin: 0;
@@ -253,9 +253,10 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     // Guardar el nombre del tema para reiniciar
     var temaActual = "<?php echo htmlspecialchars($tema); ?>";
 </script>
-<script src="js/script.js"></script>
-<script src="js/personaje.js"></script>
-<script src="js/voz.js"></script>
+<script src="js/tipos_preguntas.js?v=2"></script>
+<script src="js/script.js?v=2"></script>
+<script src="js/personaje.js?v=2"></script>
+<script src="js/voz.js?v=2"></script>
 
 <script>
     // Botón de reinicio (recarga la misma página)
@@ -263,11 +264,6 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
         window.location.href = "practica.php?tema=" + encodeURIComponent(temaActual);
     });
 </script>
-
-<script src="js/tipos_preguntas.js"></script>
-<script src="js/script.js"></script>
-<script src="js/personaje.js"></script>
-<script src="js/voz.js"></script>
 
 </body>
 </html>
