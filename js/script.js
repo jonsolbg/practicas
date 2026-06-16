@@ -343,9 +343,8 @@ function mostrarPregunta() {
             mensajeFinal += "¡Sigue practicando! 💪";
         }
         
-        // Limpiar y mostrar mensaje final
-        const opcionesDiv = document.getElementById("opcionesDiv");
         const preguntaTexto = document.getElementById("preguntaTexto");
+        const opcionesDiv = document.getElementById("opcionesDiv");
         const feedbackDiv = document.getElementById("feedbackDiv");
         const btnSiguiente = document.getElementById("btnSiguiente");
         const btnReiniciar = document.getElementById("btnReiniciar");
@@ -364,18 +363,23 @@ function mostrarPregunta() {
     preguntaActual = preguntas[indice];
     let tipo = obtenerTipoPregunta(preguntaActual);
     
-    // Actualizar el texto de la pregunta (si aplica)
+    // 🔴 IMPORTANTE: Limpiar el contenedor de preguntas
+    const opcionesDiv = document.getElementById("opcionesDiv");
     const preguntaTextoDiv = document.getElementById("preguntaTexto");
-    if (preguntaTextoDiv && tipo !== 'asociar') {
-        preguntaTextoDiv.innerText = preguntaActual.texto;
-    } else if (preguntaTextoDiv && tipo === 'asociar') {
-        preguntaTextoDiv.innerText = ""; // La asociación ya tiene su propio texto
+    
+    // Para preguntas de asociación, el texto va DENTRO del renderizado
+    // Para múltiple y V/F, el texto va en el elemento separado
+    if (tipo === 'asociar') {
+        // Asociación: el texto ya está dentro de renderizarAsociar
+        if (preguntaTextoDiv) preguntaTextoDiv.innerHTML = "";
+    } else {
+        // Múltiple o V/F: mostrar texto arriba
+        if (preguntaTextoDiv) preguntaTextoDiv.innerHTML = preguntaActual.texto;
     }
     
     // Renderizar según el tipo
     if (typeof renderizarPregunta === 'function') {
         let html = renderizarPregunta(preguntaActual, indice);
-        const opcionesDiv = document.getElementById("opcionesDiv");
         if (opcionesDiv) {
             opcionesDiv.innerHTML = html;
         }
@@ -386,15 +390,13 @@ function mostrarPregunta() {
                 configurarEventosAsociar(preguntaActual, indice);
             }, 100);
         } else {
-            // Pequeño retraso para asegurar que el DOM esté listo
             setTimeout(() => {
                 configurarEventosRespuesta();
             }, 50);
         }
     } else {
-        // Fallback
-        const opcionesDiv = document.getElementById("opcionesDiv");
-        if (opcionesDiv) {
+        // Fallback para múltiple (si no existe tipos_preguntas.js)
+        if (opcionesDiv && preguntaActual.opciones) {
             let opcionesHtml = '<div class="opciones">';
             for (let i = 0; i < preguntaActual.opciones.length; i++) {
                 opcionesHtml += `<button class="opcion" data-tipo="multiple" data-valor="${i}">${preguntaActual.opciones[i]}</button>`;

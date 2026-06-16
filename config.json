@@ -1,6 +1,6 @@
 {
   "ordenCategorias": [
-    "espanol2","espanol",
+    "espanol2","mate_santi","espanol",
     "ciencias"
   ],
   "nombresBonitos": {
@@ -8,6 +8,7 @@
     "espanol": "📚 Lenguaje y Español",
     "espanol2": "📚 Lenguaje y Español 2.0",
     "matematicas": "🧮 Matemáticas",
+    "mate_santi": "🧮 Matemáticas Santi",
     "historia": "📜 Historia",
     "geografia": "🌎 Geografía",
     "ingles": "🇺🇸 Inglés",

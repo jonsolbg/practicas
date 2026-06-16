@@ -51,8 +51,8 @@ function renderizarPregunta(pregunta, idx) {
 // TIPO 1: OPCIÓN MÚLTIPLE (3 opciones)
 // ============================================
 function renderizarMultiple(pregunta) {
-    let html = `<div class="pregunta-texto">${pregunta.texto}</div>`;
-    html += `<div class="opciones">`;
+    // 🔴 IMPORTANTE: NO incluir <div class="pregunta-texto"> aquí
+    let html = `<div class="opciones">`;
     for (let i = 0; i < pregunta.opciones.length; i++) {
         html += `<button class="opcion" data-tipo="multiple" data-valor="${i}">${pregunta.opciones[i]}</button>`;
     }
@@ -64,10 +64,10 @@ function renderizarMultiple(pregunta) {
 // TIPO 2: VERDADERO / FALSO
 // ============================================
 function renderizarVF(pregunta) {
-    let html = `<div class="pregunta-texto">${pregunta.texto}</div>`;
-    html += `<div class="opciones vf-container" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">`;
-    html += `<button class="opcion vf-btn" data-tipo="vf" data-valor="true" style="background: #4caf50; width: 150px; font-size: 1.5rem;">✅ Verdadero</button>`;
-    html += `<button class="opcion vf-btn" data-tipo="vf" data-valor="false" style="background: #f44336; width: 150px; font-size: 1.5rem;">❌ Falso</button>`;
+    // 🔴 IMPORTANTE: NO incluir <div class="pregunta-texto"> aquí
+    let html = `<div class="opciones vf-container" style="display: flex; gap: 20px; justify-content: center; align-items: center; flex-direction: row; flex-wrap: wrap; margin: 20px 0;">`;
+    html += `<button class="opcion vf-btn" data-tipo="vf" data-valor="true" style="background: #1565c0; width: 180px; font-size: 1.5rem; padding: 15px 20px;">✅ Verdadero</button>`;
+    html += `<button class="opcion vf-btn" data-tipo="vf" data-valor="false" style="background: #f44336; width: 180px; font-size: 1.5rem; padding: 15px 20px;">❌ Falso</button>`;
     html += `</div>`;
     return html;
 }

@@ -87,10 +87,10 @@
       "pares": [
         {"texto": "3⁴", "coincide": "81"},
         {"texto": "2⁶", "coincide": "64"},
-        {"texto": "4³", "coincide": "64"},
+        {"texto": "4²", "coincide": "16"},
         {"texto": "(-1)⁵", "coincide": "-1"}
       ],
-      "explicacion": "3⁴=81, 2⁶=64, 4³=64, (-1)⁵=-1.",
+      "explicacion": "3⁴=81, 2⁶=64, 4²=64, (-1)⁵=-1.",
       "datoDivertido": "🤯 64 aparece dos veces, ¡distintas potencias pueden dar el mismo resultado!"
     },
     {
