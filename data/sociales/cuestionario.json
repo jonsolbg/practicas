@@ -1,0 +1,165 @@
+{
+  "tema": "📝 Cuestionario de Estudio - Pueblos Indígenas",
+  "colorFondo": "#2C3E50",
+  "colorBoton": "#F39C12",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Qué es la cosmovisión?",
+      "opciones": [
+        "Visión del mundo de una cultura",
+        "Visión del cielo",
+        "Visión del mar",
+        "Visión de los animales"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Correcto! Es la combinación de creencias que forman la visión de una persona, época o cultura.",
+      "datoDivertido": "🌌 Cada cultura tiene su propia cosmovisión única."
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Qué alimentos son herencia indígena?",
+      "opciones": [
+        "Maíz, frijol y cacao",
+        "Trigo, arroz y papa",
+        "Avena, cebada y centeno",
+        "Naranja, limón y manzana"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Así es! Maíz, frijol, cacao, yuca, ayote y camote son algunos ejemplos.",
+      "datoDivertido": "🌽 El maíz es la base de la alimentación en Costa Rica."
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Qué técnica de cultivo usaban los indígenas?",
+      "opciones": [
+        "Hidroponía",
+        "Roza y quema",
+        "Invernaderos",
+        "Cultivo hidropónico"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! La 'roza y quema' usa cenizas como fertilizante natural.",
+      "datoDivertido": "🌾 Después de varios ciclos, la tierra descansa para recuperarse."
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Qué plantas medicinales usaban los indígenas?",
+      "opciones": [
+        "Manzanilla y romero",
+        "Rosa y girasol",
+        "Orquídea y lirio",
+        "Margarita y dalia"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Así es! Manzanilla, romero, hierbabuena, orégano y sabiá son algunas.",
+      "datoDivertido": "🌿 Las usaban para hacer tés, jarabes y ungüentos."
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Qué palabra NO es de origen indígena?",
+      "opciones": [
+        "Cacique",
+        "Coyote",
+        "Computadora",
+        "Colibrí"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Correcto! 'Computadora' es una palabra moderna, no de origen indígena.",
+      "datoDivertido": "📖 Cacique, coyote y colibrí sí son palabras de origen indígena."
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Qué son las esferas de piedra?",
+      "opciones": [
+        "Decoraciones modernas",
+        "Patrimonio de la Humanidad",
+        "Juguetes indígenas",
+        "Utensilios de cocina"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Las esferas de piedra son Patrimonio de la Humanidad.",
+      "datoDivertido": "🗿 Muestran la sofisticación de las civilizaciones indígenas."
+    },
+    {
+      "id": 7,
+      "tipo": "vf",
+      "texto": "Los indígenas no usaban plantas medicinales.",
+      "correcta": false,
+      "explicacion": "¡Falso! Desarrollaron un profundo conocimiento de plantas medicinales.",
+      "datoDivertido": "🌿 Las plantas actúan como pequeños laboratorios naturales."
+    },
+    {
+      "id": 8,
+      "tipo": "vf",
+      "texto": "El maíz es un alimento de origen indígena.",
+      "correcta": true,
+      "explicacion": "¡Verdadero! El maíz es uno de los alimentos más importantes heredados.",
+      "datoDivertido": "🌽 De él se hacen tortillas, tamales y rosquillas."
+    },
+    {
+      "id": 9,
+      "tipo": "vf",
+      "texto": "La técnica de 'roza y quema' no usa fertilizantes naturales.",
+      "correcta": false,
+      "explicacion": "¡Falso! Las cenizas de la quema actúan como fertilizante natural.",
+      "datoDivertido": "🔥 Es una técnica sostenible que respeta los ciclos naturales."
+    },
+    {
+      "id": 10,
+      "tipo": "vf",
+      "texto": "El legado indígena solo se ve en la gastronomía.",
+      "correcta": false,
+      "explicacion": "¡Falso! También está presente en el lenguaje, celebraciones, artes y medicina.",
+      "datoDivertido": "🎨 Las artes y la música también reflejan el legado indígena."
+    },
+    {
+      "id": 11,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada palabra con su significado:",
+      "pares": [
+        {
+          "texto": "Cacique",
+          "coincide": "Líder indígena"
+        },
+        {
+          "texto": "Jaguar",
+          "coincide": "Animal felino"
+        },
+        {
+          "texto": "Colibrí",
+          "coincide": "Pájaro pequeño"
+        }
+      ],
+      "explicacion": "¡Excelente! Estas palabras son de origen indígena.",
+      "datoDivertido": "📖 El español tiene cientos de palabras indígenas."
+    },
+    {
+      "id": 12,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada planta con su uso:",
+      "pares": [
+        {
+          "texto": "Manzanilla",
+          "coincide": "Té para el estómago"
+        },
+        {
+          "texto": "Romero",
+          "coincide": "Condimento"
+        },
+        {
+          "texto": "Hierbabuena",
+          "coincide": "Infusiones"
+        }
+      ],
+      "explicacion": "¡Muy bien! Los indígenas usaban estas plantas para curar.",
+      "datoDivertido": "🌿 Las plantas medicinales son un legado valioso."
+    }
+  ]
+}

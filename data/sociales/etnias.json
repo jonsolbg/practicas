@@ -1,0 +1,361 @@
+{
+  "tema": "🌿 Pueblos Indígenas de Costa Rica - Edición Completa",
+  "colorFondo": "#1B4D3D",
+  "colorBoton": "#E8A838",
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "multiple",
+      "texto": "¿Dónde se ubican principalmente los Huetares?",
+      "opciones": [
+        "Talamanca",
+        "Mora y Puriscal",
+        "Guatuso",
+        "Pacífico Sur"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! Los Huetares viven en Quitirrisí (Mora) y Zapatón (Puriscal).",
+      "datoDivertido": "🏔️ Construían altares de piedra para rendir tributo al sol y la luna."
+    },
+    {
+      "id": 2,
+      "tipo": "multiple",
+      "texto": "¿Qué etnia celebra el 'Baile de los Diablitos'?",
+      "opciones": [
+        "Bribris",
+        "Malekus",
+        "Bruncas",
+        "Cabécares"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Así es! El Baile de los Diablitos lo celebran los Bruncas cada 31 de diciembre.",
+      "datoDivertido": "🎭 Los hombres fabrican máscaras de madera de balsa para esta festividad."
+    },
+    {
+      "id": 3,
+      "tipo": "multiple",
+      "texto": "¿Quién es el dios creador de los Bribris?",
+      "opciones": [
+        "Tocu",
+        "Sibú",
+        "Nícarque",
+        "Sol"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Muy bien! Sibú es el dios creador supremo para los Bribris.",
+      "datoDivertido": "🌳 Los Bribris consideran la selva como sagrada y viva."
+    },
+    {
+      "id": 4,
+      "tipo": "multiple",
+      "texto": "¿Dónde viven los Malekus o Guatusos?",
+      "opciones": [
+        "San Rafael de Guatuso",
+        "Talamanca",
+        "Boruca",
+        "Buenos Aires"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Correcto! Los Malekus viven en San Rafael de Guatuso, Alajuela.",
+      "datoDivertido": "🌅 Los Malekus bañan a su dios Tocu todos los días a las 4 de la mañana."
+    },
+    {
+      "id": 5,
+      "tipo": "multiple",
+      "texto": "¿Qué técnica agrícola usaban los indígenas?",
+      "opciones": [
+        "Riego por goteo",
+        "Roza y quema",
+        "Hidroponía",
+        "Terrazas"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Exacto! La técnica de 'roza y quema' usa cenizas como fertilizante natural.",
+      "datoDivertido": "🌾 Después de varios ciclos, la tierra descansa para recuperar nutrientes."
+    },
+    {
+      "id": 6,
+      "tipo": "multiple",
+      "texto": "¿Cuál es un instrumento musical de los Huetares?",
+      "opciones": [
+        "Marimba",
+        "Ocarina",
+        "Guitarra",
+        "Tambor"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Sí! La ocarina es una flauta ovalada que usaban los Huetares.",
+      "datoDivertido": "🎵 Los tambores anunciaban eventos como la preparación para la guerra."
+    },
+    {
+      "id": 7,
+      "tipo": "multiple",
+      "texto": "¿Qué veneran los Térrabas en una piedra sagrada?",
+      "opciones": [
+        "El sol",
+        "La luna",
+        "La Mano de Tigre",
+        "El jaguar"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Correcto! La 'Mano de Tigre' es venerada por los Térrabas.",
+      "datoDivertido": "🗿 La piedra está en la cima de una montaña cercana a su pueblo."
+    },
+    {
+      "id": 8,
+      "tipo": "multiple",
+      "texto": "¿Qué espíritu maligno creen los Ngäbes?",
+      "opciones": [
+        "Sibú",
+        "Tocu",
+        "Nícarque",
+        "Sol"
+      ],
+      "correcta": 2,
+      "explicacion": "¡Así es! Nícarque es un espíritu maligno para los Ngäbes.",
+      "datoDivertido": "🐕 Los chamanes entrenan a Nícarque para liberar a los enfermos."
+    },
+    {
+      "id": 9,
+      "tipo": "multiple",
+      "texto": "¿Qué producto NO es herencia indígena?",
+      "opciones": [
+        "Maíz",
+        "Trigo",
+        "Yuca",
+        "Cacao"
+      ],
+      "correcta": 1,
+      "explicacion": "¡Correcto! El trigo fue traído por los europeos, no es originario de América.",
+      "datoDivertido": "🌽 El maíz, la yuca y el cacao son alimentos heredados por los indígenas."
+    },
+    {
+      "id": 10,
+      "tipo": "multiple",
+      "texto": "¿Qué significa 'cosmovisión'?",
+      "opciones": [
+        "Visión del mundo",
+        "Visión de la tierra",
+        "Visión del cielo",
+        "Visión del mar"
+      ],
+      "correcta": 0,
+      "explicacion": "¡Exacto! Es la combinación de creencias que forman la visión de una cultura.",
+      "datoDivertido": "🌌 Cada cultura tiene su propia cosmovisión."
+    },
+    {
+      "id": 11,
+      "tipo": "vf",
+      "texto": "Los Cabécares se ubican en la provincia de Alajuela.",
+      "correcta": false,
+      "explicacion": "¡No! Los Cabécares viven en Talamanca, en las provincias de Limón y Cartago.",
+      "datoDivertido": "🌿 Los Cabécares son uno de los grupos más numerosos con 5,000 a 6,000 habitantes."
+    },
+    {
+      "id": 12,
+      "tipo": "vf",
+      "texto": "Los Bribris creen que la selva es sagrada y viva.",
+      "correcta": true,
+      "explicacion": "¡Correcto! Para los Bribris, la selva no es solo un recurso, es sagrada.",
+      "datoDivertido": "🦥 Los Bribris tallan animales sagrados como los yahuas y pájaros."
+    },
+    {
+      "id": 13,
+      "tipo": "vf",
+      "texto": "La 'Mano de Tigre' es venerada por los Ngäbes.",
+      "correcta": false,
+      "explicacion": "¡No! La 'Mano de Tigre' es venerada por los Térrabas en una piedra sagrada.",
+      "datoDivertido": "🗿 Los Térrabas buscan armonía con la naturaleza en todo lo que hacen."
+    },
+    {
+      "id": 14,
+      "tipo": "vf",
+      "texto": "Los Malekus entierran a sus difuntos dentro de sus hogares.",
+      "correcta": true,
+      "explicacion": "¡Así es! Creen que los espíritus de sus ancestros influyen positivamente.",
+      "datoDivertido": "👻 Los Malekus creen en tres tipos de entidades: dioses, diablos y espectros."
+    },
+    {
+      "id": 15,
+      "tipo": "vf",
+      "texto": "Los Chorotegas consideran la tierra como madre y proveedora.",
+      "correcta": true,
+      "explicacion": "¡Correcto! La tierra es un elemento central en la cosmovisión Chorotega.",
+      "datoDivertido": "🌍 Celebran la tierra con festividades comunitarias."
+    },
+    {
+      "id": 16,
+      "tipo": "vf",
+      "texto": "Los Bruncas perdieron completamente su idioma y creencias.",
+      "correcta": false,
+      "explicacion": "¡No! Aunque perdieron su idioma, mantienen creencias en espíritus y chamanes.",
+      "datoDivertido": "🎭 El Baile de los Diablitos es una tradición muy viva entre los Bruncas."
+    },
+    {
+      "id": 17,
+      "tipo": "vf",
+      "texto": "La técnica de 'roza y quema' es dañina para el medio ambiente.",
+      "correcta": false,
+      "explicacion": "¡No! Es una técnica sostenible que permite recuperar nutrientes del suelo.",
+      "datoDivertido": "🌱 Los indígenas observaban los ciclos naturales para practicarla."
+    },
+    {
+      "id": 18,
+      "tipo": "vf",
+      "texto": "La ocarina es un instrumento musical de los Huetares.",
+      "correcta": true,
+      "explicacion": "¡Sí! La ocarina es una flauta ovalada con orificios para los dedos.",
+      "datoDivertido": "🎵 También usaban tambores para anunciar eventos importantes."
+    },
+    {
+      "id": 19,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada etnia con su ubicación principal:",
+      "pares": [
+        {
+          "texto": "Bribris",
+          "coincide": "Talamanca (Limón y Cartago)"
+        },
+        {
+          "texto": "Bruncas",
+          "coincide": "Territorio de Boruca"
+        },
+        {
+          "texto": "Malekus",
+          "coincide": "San Rafael de Guatuso"
+        },
+        {
+          "texto": "Térrabas",
+          "coincide": "Orillas del Río Grande de Térraba"
+        }
+      ],
+      "explicacion": "¡Excelente! Cada etnia tiene su territorio propio con características únicas.",
+      "datoDivertido": "🗺️ Costa Rica tiene 8 pueblos indígenas reconocidos oficialmente."
+    },
+    {
+      "id": 20,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada cosmovisión con su etnia correspondiente:",
+      "pares": [
+        {
+          "texto": "Dios Sibú como creador",
+          "coincide": "Bribris"
+        },
+        {
+          "texto": "Tributo al sol y la luna",
+          "coincide": "Huetares"
+        },
+        {
+          "texto": "Creen en Nícarque",
+          "coincide": "Ngäbes"
+        },
+        {
+          "texto": "Veneran a su dios Tocu",
+          "coincide": "Malekus"
+        }
+      ],
+      "explicacion": "¡Muy bien! Cada cultura tiene su propia forma de ver el mundo.",
+      "datoDivertido": "🌌 La cosmovisión es la combinación de creencias que forman la visión de una cultura."
+    },
+    {
+      "id": 21,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada expresión artística con su etnia:",
+      "pares": [
+        {
+          "texto": "Hamacas con diseños complejos",
+          "coincide": "Cabécares"
+        },
+        {
+          "texto": "Baile de los Diablitos",
+          "coincide": "Bruncas"
+        },
+        {
+          "texto": "Arcos y flechas tradicionales",
+          "coincide": "Malekus"
+        },
+        {
+          "texto": "Chácaras o bolsas tejidas",
+          "coincide": "Ngäbes"
+        }
+      ],
+      "explicacion": "¡Perfecto! Cada etnia tiene expresiones artísticas que reflejan su identidad.",
+      "datoDivertido": "🎨 Las artesanías indígenas usan materiales naturales como algodón y tintes vegetales."
+    },
+    {
+      "id": 22,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada alimento con su origen indígena:",
+      "pares": [
+        {
+          "texto": "Maíz",
+          "coincide": "Tortillas, tamales, rosquillas"
+        },
+        {
+          "texto": "Cacao",
+          "coincide": "Chocolate y bebidas"
+        },
+        {
+          "texto": "Yuca",
+          "coincide": "Raíz comestible"
+        },
+        {
+          "texto": "Frijol",
+          "coincide": "Gallo pinto"
+        }
+      ],
+      "explicacion": "¡Excelente! Muchos alimentos básicos de Costa Rica son herencia indígena.",
+      "datoDivertido": "🍽️ El gallo pinto es uno de los platos más representativos del país."
+    },
+    {
+      "id": 23,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada palabra con su origen o significado:",
+      "pares": [
+        {
+          "texto": "Cacique",
+          "coincide": "Líder de una tribu"
+        },
+        {
+          "texto": "Coyote",
+          "coincide": "Animal silvestre"
+        },
+        {
+          "texto": "Colibrí",
+          "coincide": "Pájaro pequeño"
+        },
+        {
+          "texto": "Papalote",
+          "coincide": "Cometa"
+        }
+      ],
+      "explicacion": "¡Muy bien! Muchas palabras del español vienen de lenguas indígenas.",
+      "datoDivertido": "📖 El español incorporó cientos de palabras de origen indígena."
+    },
+    {
+      "id": 24,
+      "tipo": "asociar",
+      "texto": "🔗 Relaciona cada planta medicinal con su uso:",
+      "pares": [
+        {
+          "texto": "Manzanilla",
+          "coincide": "Té para el estómago"
+        },
+        {
+          "texto": "Romero",
+          "coincide": "Condimento y remedio"
+        },
+        {
+          "texto": "Hierbabuena",
+          "coincide": "Infusiones y cocina"
+        },
+        {
+          "texto": "Sabiá",
+          "coincide": "Planta medicinal"
+        }
+      ],
+      "explicacion": "¡Excelente! Los indígenas desarrollaron un profundo conocimiento de plantas medicinales.",
+      "datoDivertido": "🌿 Las plantas medicinales son pequeños laboratorios naturales."
+    }
+  ]
+}

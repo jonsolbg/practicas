@@ -66,14 +66,14 @@ El sistema soporta TRES tipos de preguntas:
 }
 
 ## Reglas importantes:
-- Si no se especifica "tipo" en una pregunta, asume que es "multiple" (retrocompatible)
 - Las preguntas de asociación deben tener entre 3 y 5 pares
 - Usa emojis para hacerlo divertido
-- No des pistas de la respuesta correcta en el texto de la pregunta ni tampoco usando emojis.
+- No des pistas de la respuesta correcta en el texto de la pregunta.
 - Explicaciones cortas y positivas
 - Colores vivos, hagámoslo atractivo para niños
 - Mezcla los 3 tipos de preguntas en el mismo archivo para variedad pero agrupando, primero algunas de múltiple, luego verdadero/falso y finalmente asociación.
 - De 10 a 12 preguntas por tema. Pueden ser más si son de tipo "asociación" o "verdadero/falso".
+- Genera un archivo .json por cada tema, con un título atractivo y emojis relacionados al tema.
 
 ## Tema del JSON:
 [TEMA AQUÍ]
