@@ -217,8 +217,9 @@ function limpiarEstilosBotones() {
     }
 }
 
+
 // ============================================
-// MANEJAR RESPUESTA (Múltiple y V/F)
+// MANEJAR RESPUESTA (Múltiple, V/F y Asociación)
 // ============================================
 function manejarRespuesta(tipo, valor) {
     if (bloqueado) return;
@@ -226,12 +227,18 @@ function manejarRespuesta(tipo, valor) {
     let esCorrecta = false;
     let respuestaCorrectaTexto = "";
     
+    // Determinar si es correcta según el tipo
     if (tipo === 'multiple') {
         esCorrecta = (parseInt(valor) === preguntaActual.correcta);
         respuestaCorrectaTexto = preguntaActual.opciones[preguntaActual.correcta];
     } else if (tipo === 'vf') {
-        esCorrecta = (valor === 'true') === preguntaActual.correcta;
+        // 🔴 CORRECCIÓN: Comparar correctamente el valor booleano
+        let valorBooleano = (valor === 'true');
+        esCorrecta = (valorBooleano === preguntaActual.correcta);
         respuestaCorrectaTexto = preguntaActual.correcta ? 'Verdadero' : 'Falso';
+    } else {
+        // Asociación se maneja en verificarAsociacion
+        return;
     }
     
     bloqueado = true;
@@ -240,28 +247,39 @@ function manejarRespuesta(tipo, valor) {
     let botones = document.querySelectorAll(".opcion, .vf-btn");
     for (let i = 0; i < botones.length; i++) {
         let btn = botones[i];
+        btn.disabled = true;
+        
         if (tipo === 'multiple') {
             if (parseInt(btn.dataset.valor) === preguntaActual.correcta) {
                 btn.classList.add("opcion-correcta");
             }
-            if (btn === document.querySelector(`.opcion[data-valor="${valor}"]`) && !esCorrecta) {
+            if (btn.dataset.valor == valor && !esCorrecta) {
                 btn.classList.add("opcion-incorrecta");
             }
         } else if (tipo === 'vf') {
-            if ((btn.dataset.valor === 'true' && preguntaActual.correcta === true) ||
-                (btn.dataset.valor === 'false' && preguntaActual.correcta === false)) {
+            // Marcar el botón correcto en verde
+            let esCorrectoBtn = false;
+            if (preguntaActual.correcta === true && btn.dataset.valor === 'true') {
+                esCorrectoBtn = true;
+            } else if (preguntaActual.correcta === false && btn.dataset.valor === 'false') {
+                esCorrectoBtn = true;
+            }
+            
+            if (esCorrectoBtn) {
                 btn.classList.add("opcion-correcta");
             }
+            
+            // Si el botón seleccionado es incorrecto, marcarlo en rojo
             if (btn.dataset.valor === valor && !esCorrecta) {
                 btn.classList.add("opcion-incorrecta");
             }
         }
-        btn.disabled = true;
     }
     
     let feedbackHtml = "";
     
     if (esCorrecta) {
+        // 🔴 CORRECCIÓN: Incrementar contadores SOLO si es correcta
         aciertos++;
         aciertosSeguidos++;
         actualizarEstrellas();
@@ -281,6 +299,7 @@ function manejarRespuesta(tipo, valor) {
             }
         }
     } else {
+        // Incorrecto
         if (configRacha && configRacha.resetearAlFallar && aciertosSeguidos > 0) {
             let rachaPerdida = aciertosSeguidos;
             aciertosSeguidos = 0;
@@ -483,7 +502,8 @@ function guardarProgreso(aciertos, total, rachaMaxima, temaNombre) {
 function inicializar() {
     // Cargar preguntas
     if (typeof temaData !== 'undefined' && temaData.preguntas) {
-        preguntas = temaData.preguntas;
+        // 🔴 NUEVO: Desordenar la práctica al inicio
+        preguntas = desordenarPractica(temaData.preguntas);
     }
     
     // Cargar configuración de racha
@@ -497,6 +517,9 @@ function inicializar() {
     cargarConfigSonidos();
     
     // Iniciar juego
+    indice = 0;
+    aciertos = 0;
+    aciertosSeguidos = 0;
     actualizarEstrellas();
     mostrarPregunta();
 }
@@ -506,4 +529,66 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', inicializar);
 } else {
     inicializar();
+}
+
+
+// ============================================
+// FUNCIONES DE ORDEN ALEATORIO
+// ============================================
+
+// Función para desordenar un array (algoritmo Fisher-Yates)
+function desordenarArray(array) {
+    let arr = [...array]; // Copiar para no modificar el original
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+// Función para desordenar las opciones de una pregunta múltiple
+function desordenarOpciones(pregunta) {
+    if (pregunta.tipo !== 'multiple' && !pregunta.opciones) return pregunta;
+    
+    // Crear pares (opción, índice original)
+    let pares = pregunta.opciones.map((texto, idx) => ({ texto, idx }));
+    pares = desordenarArray(pares);
+    
+    // Crear nueva pregunta con opciones desordenadas
+    let nuevaPregunta = { ...pregunta };
+    nuevaPregunta.opciones = pares.map(p => p.texto);
+    
+    // Actualizar el índice de la respuesta correcta
+    let indiceCorrectoOriginal = pregunta.correcta;
+    let textoCorrecto = pregunta.opciones[indiceCorrectoOriginal];
+    nuevaPregunta.correcta = pares.findIndex(p => p.idx === indiceCorrectoOriginal);
+    
+    return nuevaPregunta;
+}
+
+// Función para desordenar los pares de una pregunta de asociación
+function desordenarPares(pregunta) {
+    if (pregunta.tipo !== 'asociar' || !pregunta.pares) return pregunta;
+    
+    let nuevaPregunta = { ...pregunta };
+    nuevaPregunta.pares = desordenarArray(pregunta.pares);
+    return nuevaPregunta;
+}
+
+// Función principal para desordenar una práctica completa
+function desordenarPractica(preguntas) {
+    // Desordenar el orden de las preguntas
+    let preguntasDesordenadas = desordenarArray(preguntas);
+    
+    // Desordenar opciones dentro de cada pregunta (múltiple) y pares (asociación)
+    preguntasDesordenadas = preguntasDesordenadas.map(pregunta => {
+        if (pregunta.tipo === 'multiple' || (!pregunta.tipo && pregunta.opciones)) {
+            return desordenarOpciones(pregunta);
+        } else if (pregunta.tipo === 'asociar') {
+            return desordenarPares(pregunta);
+        }
+        return pregunta;
+    });
+    
+    return preguntasDesordenadas;
 }

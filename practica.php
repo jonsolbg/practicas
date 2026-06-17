@@ -254,7 +254,7 @@ $rachaConfig = isset($data['racha']) ? $data['racha'] : (isset($configGlobal['ra
     var temaActual = "<?php echo htmlspecialchars($tema); ?>";
 </script>
 <script src="js/tipos_preguntas.js?v=3"></script>
-<script src="js/script.js?v=3"></script>
+<script src="js/script.js?v=5"></script>
 <script src="js/personaje.js?v=2"></script>
 <script src="js/voz.js?v=2"></script>
 
